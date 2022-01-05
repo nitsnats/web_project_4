@@ -1,6 +1,6 @@
 .cover{
     min-height: 740px;
-    background-image: url("./images/__background.jpg");
+    background-image: url("../../../images/__background.jpg");
     background-size: 867px 637px;
     background-repeat: no-repeat;
     position: relative;

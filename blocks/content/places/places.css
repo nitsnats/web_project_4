@@ -1,0 +1,9 @@
+.places.css{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    border: rgb(189, 7, 68) 10px solid;
+}

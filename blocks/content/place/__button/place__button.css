@@ -1,0 +1,14 @@
+.place__button{
+    font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+color: #FFFFFF;
+background-color: #0278FE;
+width: 208px;
+height: 22px;
+margin: 61px 0;
+padding: 13px 20px;
+text-decoration: none;
+    border: rgb(255, 105, 105) 2px solid;
+}

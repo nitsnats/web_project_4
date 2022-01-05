@@ -1,0 +1,10 @@
+.place__title{
+    border: rgb(105, 255, 105) 2px solid;
+    font-style: normal;
+font-weight: 900;
+font-size: 72px;
+line-height: 76px;
+width: 460px;
+height: 152px;
+margin: 0;
+}

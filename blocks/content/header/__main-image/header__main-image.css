@@ -1,0 +1,8 @@
+.header__main-image{
+    width: 948px;
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 64px 148px 0;
+    filter: grayscale(100%);
+}

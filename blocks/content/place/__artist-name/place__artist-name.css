@@ -1,0 +1,10 @@
+.place__artist-name{
+    font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+width: 456px;
+height: 22px;
+margin: 0;
+    border: rgb(255, 105, 248) 2px solid;
+}
