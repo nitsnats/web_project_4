@@ -1,9 +1,5 @@
-.places.css{
-    display: flex;
-    flex-direction: column;
+.places{
     justify-content: space-around;
-    align-items: center;
-    margin: auto;
+    margin: 12px auto 0 auto;
     width: 80%;
-    border: rgb(189, 7, 68) 10px solid;
 }

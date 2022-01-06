@@ -1,0 +1,15 @@
+.cover__button{
+    padding: 13px 20px;
+    color: #FFFFFF;
+    background-color: #0278FE;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin: 45px auto 0;
+    width: 97px;
+    height: 22px;
+    display: block;
+    border-radius: 5px;
+}

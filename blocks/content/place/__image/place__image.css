@@ -1,6 +1,17 @@
 .place__image{
+    position: absolute;
     width: 460px;
     height: 460px;
     margin: 48px 0;
-    border: rgb(105, 213, 255) 2px solid;
+    left: 0;
+    top: 0;
 }
+
+.place__image:last-of-type{
+    background-color: #fff;
+    min-height: 460px;
+    position: relative;
+    overflow: hidden;
+    text-indent: -10000px;
+}
+

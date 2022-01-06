@@ -1,5 +1,6 @@
 .place{
-    margin: 92px 672px 0 148px;
+    position: relative;
+    margin: 80px 0 0 0;
     width: 460px;
-    border: rgb(255, 173, 105) 2px solid;
 }
+

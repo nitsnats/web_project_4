@@ -1,0 +1,11 @@
+.place__text-block{
+  z-index: 100;
+  position: absolute;
+  color: black;
+  left: 100px;
+  top: 430px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 163%;
+}

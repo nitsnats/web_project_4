@@ -7,8 +7,9 @@ color: #FFFFFF;
 background-color: #0278FE;
 width: 208px;
 height: 22px;
-margin: 61px 0;
+margin: 61px 0 80px 0;
 padding: 13px 20px;
 text-decoration: none;
-    border: rgb(255, 105, 105) 2px solid;
+text-align: center;
+border-radius: 5px;
 }
