@@ -7,5 +7,12 @@
     display: block;
     overflow: hidden;
     margin: 92px 48px;
+    opacity: 1;
+}
+
+.cover:hover{
+    opacity: 0.8;
+    /*cursor: url("../../../images/cursor-black.svg") 0 0, auto;*/
+
 }
 
