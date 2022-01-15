@@ -1,9 +1,61 @@
 .header__title{
-margin: 0;
-text-align: center;
-font-weight: 900;
-font-size: 96px;
-line-height: 100px;
-padding: 90px 0 0;
-overflow: hidden;
+    margin: 90px auto 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 1.5;
+    overflow: hidden;
+    max-width: 793px;
+    max-height: 200px;
 }
+
+@media screen and (max-width:768px) {
+.header__title{
+    margin: 90px auto 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 100px;
+    overflow: hidden;
+    width: 720px;
+    height: 300px;
+    }
+}
+@media screen and (max-width:319px) {
+.header__title{
+    margin: 51px auto 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    overflow: hidden;
+    max-width: 288px;
+    max-height: 132px;
+    }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1280px){
+    .header__title{
+        border: blueviolet 2px solid;
+    }
+}
+
+
+@media screen and (max-width: 1280px) and (min-width: 768px){
+    .header__title{
+        border: rgb(73, 226, 43) 2px solid;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px){
+        
+    .header__title{
+        border: rgb(226, 43, 43) 2px solid;
+    }
+}
+
+@media screen and (max-width: 320px){
+
+    .header__title{
+        border: rgb(192, 226, 43) 2px solid;
+    }

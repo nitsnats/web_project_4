@@ -6,6 +6,6 @@ font-size: 72px;
 line-height: 76px;
 text-align: center;
 color: #FFFDFD;
-width: 656px;
+max-width: 656px;
 height: 76px;
 }

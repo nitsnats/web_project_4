@@ -1,5 +1,17 @@
 .header {
     justify-content: center;
     margin: 0 auto;
-    
+    padding-top: 34px;
+}
+@media screen and (max-width:768px) {
+    .header{
+        padding-top: 34px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:319px) {
+    .header{
+        padding-top: 20px;
+        margin: 0 auto;
+    }
 }

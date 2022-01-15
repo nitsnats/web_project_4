@@ -6,6 +6,6 @@
     text-align: start;
     margin: 32px 412px 0 148px;
     overflow: hidden;
-    width: 720px;
+    max-width: 720px;
     height: 156px;
 }

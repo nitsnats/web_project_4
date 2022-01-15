@@ -16,5 +16,5 @@
 
 .cover__button:hover{
     background-color: #0063D2;
-    caret-color: black;
+    /*caret-color: black;*/
 }

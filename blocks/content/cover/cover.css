@@ -8,11 +8,13 @@
     overflow: hidden;
     margin: 92px 48px;
     opacity: 1;
+    z-index: 0;
 }
 
 .cover:hover{
     opacity: 0.8;
-    /*cursor: url("../../../images/cursor-black.svg") 0 0, auto;*/
-
 }
 
+.cover:hover .overlay{
+    opacity: 0;
+}

@@ -1,7 +1,0 @@
-.cursor{
-    background: black;
-    border: #FFFFFF 1px solid;
-    height: 100%;
-    width: 100%;
-    cursor: url("../../../../../images/cursor-black.svg") 0 0, auto;
-}
