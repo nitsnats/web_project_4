@@ -1,7 +1,5 @@
 .place__description{
-    /*display: flex;
-    flex-direction: column;
-    grid-area: description;*/
+    margin-top: 48px;
     display: block;
     max-width: 484px;
     border: solid 2px darkgreen;
@@ -9,7 +7,7 @@
 
 @media screen and (max-width: 320px) and (min-width: 767px){
 .place__description {
-align-items: center;
-margin: 0 16px;
-}
+    align-items: center;
+    margin: 0 16px;
+    }
 }

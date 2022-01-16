@@ -2,22 +2,24 @@
 font-style: normal;
 font-weight: 900;
 font-size: 3.3rem;
-/*line-height: 1.5;*/
-text-align: start;
-padding-top: 92px;
-/*margin: 92px 347px 0 148px;*/
-border: rgb(135, 71, 255) 2px solid;
+/*border: rgb(135, 71, 255) 2px solid;*/
 }
 
-/*@media screen and (max-width:768px) {
-    .description__title{
-        
+@media screen and (min-width:550px) and (max-width:768px){
+.description__title{
+    font-size: 2.9rem;    
     }
-}*/
+}
+
+@media screen and (min-width:320px) and (max-width:550px){
+    .description__title{
+        font-size: 2.5rem;    
+        }
+    }
 
 @media screen and (max-width:320px) {
-    .description__title{
-        font-size: 2rem;
+.description__title{
+    font-size: 2rem;
     }
 }
 

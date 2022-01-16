@@ -6,16 +6,15 @@
     text-align: left;
     color: #aaaaaa;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-top: 192px;
     border: solid 2px orange;
 }
-/*
+
 @media  screen and (max-width:768px) {
 .place__artist-heading{
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    letter-spacing: 0.12em;
     text-transform: uppercase;
     max-width: 50px;
     height: 15px;
@@ -28,10 +27,9 @@
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    letter-spacing: 0.12em;
     text-transform: uppercase;
     max-width: 50px;
     height: 15px;
     margin: 0; 
 }  
-}*/
+}

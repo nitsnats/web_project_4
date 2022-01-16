@@ -1,8 +1,7 @@
 .place__button{
     background: #0278fe;
-    /*max-width: 248px;
-    height: 48px;*/
-    font-size: 18px;
+    margin-top: 48px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     text-align: center;
@@ -11,7 +10,6 @@
     padding: 13px 20px;
     justify-self: start;
     text-decoration: none;
-    grid-area: button;
     border-radius: 4px;
     transition: background-color 0.5s ease;
     border: solid 2px lightgreen;
@@ -22,9 +20,28 @@ background-color: #0063D2;
 
 }
 
+
+@media screen and (max-width: 768px) and (min-width: 1279px){
+    .place__button {
+        
+}
+
 @media screen and (max-width: 320px) and (min-width: 767px){
 .place__button {
-margin: 0 16px;
-min-width: 288px;
+    margin: 0 16px;
+    max-width: 288px;
 }
+}
+    
+@media screen and (max-width:768px) {
+    .place__button{
+        margin: 0 24px;
+        max-width: 248px; 
+    }
+}
+@media screen and (max-width:320px) {
+    .place__button{
+        margin: 0 16px;
+        max-width: 288px;
+    }
 }
