@@ -1,5 +1,31 @@
 .places{
-    justify-content: space-around;
-    margin: 12px auto 0 auto;
+    display: inline-block;
+    /*flex-direction: column;*/
+    margin: 0 148px;
     width: 80%;
+    border: solid 2px rgb(153, 54, 51);
 }
+/*
+@media screen and (max-width:768px) {
+    .places{
+        margin: 0 24px;
+    }
+}
+@media screen and (max-width:319px) {
+    .places{
+        margin: 0 auto;
+    }
+}*/
+
+@media screen and (max-width: 768px) and (min-width: 1279px){
+    .places {
+        margin: 0 24px;
+    }
+}
+
+@media screen and (max-width: 320px) and (min-width: 767px){
+.places {
+    margin: 0;
+    }
+}
+

@@ -1,13 +1,23 @@
 .description__title{
 font-style: normal;
 font-weight: 900;
-font-size: 3rem;
+font-size: 3.3rem;
 /*line-height: 1.5;*/
 text-align: start;
-margin: 92px 347px 0 148px;
+padding-top: 92px;
+/*margin: 92px 347px 0 148px;*/
 border: rgb(135, 71, 255) 2px solid;
-overflow: hidden;
-width: 785px;
-height: 116px;
+}
+
+/*@media screen and (max-width:768px) {
+    .description__title{
+        
+    }
+}*/
+
+@media screen and (max-width:320px) {
+    .description__title{
+        font-size: 2rem;
+    }
 }
 

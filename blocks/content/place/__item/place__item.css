@@ -1,4 +1,62 @@
-.place__item{
+.place__item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    border: solid2px springgreen;
+   /* margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-rows: 0.2fr 0.5fr 0.1fr;
+    grid-gap: 48px 40px;
+    grid-template-areas:
+        "title artist"
+        "image description"
+        "button description";
+        border: solid 2px lightblue;*/
 }
+/*
+@media screen and (max-width:768px) {
+.place__item{
+    flex-wrap: wrap;
+}
+}
+@media screen and (max-width:319px) {
+.place__item{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1279px){
+.place__items {
+    margin: 0 0 64px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.2fr auto auto 0.1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+     "title"
+     "artist"
+     "image"
+     "description"
+     "button";
+    align-items: center;
+    }
+}
+
+@media screen and (max-width: 320px) and (min-width: 767px){
+.place__items {
+    margin: 0 0 64px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.3fr auto auto;
+    grid-gap: 30px;
+    grid-template-areas:
+    "title"
+    "artist"
+    "image"
+    "description"
+    "button";
+    align-items: center;
+    }
+}*/

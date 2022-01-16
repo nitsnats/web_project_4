@@ -1,3 +1,7 @@
 .footer__copyright{
-    margin: 0 558px 24px 557px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 24px;
+    width: 100%;
 }

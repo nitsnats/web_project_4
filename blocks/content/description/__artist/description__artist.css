@@ -1,11 +1,11 @@
 .description__artist{
 font-weight: normal;
-font-size: 24px;
-line-height: 34px;
+font-size: 1.5rem;
+/*line-height: 34px;*/
 text-align: right;
-overflow: hidden;
-max-width: 720px;
-height: 34px;
-margin: 10px 412px 0 148px;  
+/*overflow: hidden;
+width: 60%;
+/*height: 34px;
+margin: 10px 412px 0 148px;  */
 }
 

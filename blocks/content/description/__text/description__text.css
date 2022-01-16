@@ -1,11 +1,11 @@
 .description__text{
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 163%;
-    text-align: start;
-    margin: 32px 412px 0 148px;
-    overflow: hidden;
-    max-width: 720px;
-    height: 156px;
+    font-size: 1rem;
+    line-height: 1.5;
+    /*text-align: start;*/
+    padding-top: 32px;
+    /*margin: 32px 412px 0 148px;*/
+    
+    
 }

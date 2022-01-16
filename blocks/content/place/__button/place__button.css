@@ -1,20 +1,30 @@
 .place__button{
+    background: #0278fe;
+    /*max-width: 248px;
+    height: 48px;*/
+    font-size: 18px;
     font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 22px;
-color: #FFFFFF;
-background-color: #0278FE;
-width: 208px;
-height: 22px;
-margin: 61px 0 80px 0;
-padding: 13px 20px;
-text-decoration: none;
-text-align: center;
-border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 13px 20px;
+    justify-self: start;
+    text-decoration: none;
+    grid-area: button;
+    border-radius: 4px;
+    transition: background-color 0.5s ease;
+    border: solid 2px lightgreen;
 }
 
 .place__button:hover{
-    background-color: #0063D2;
-    
+background-color: #0063D2;
+
+}
+
+@media screen and (max-width: 320px) and (min-width: 767px){
+.place__button {
+margin: 0 16px;
+min-width: 288px;
+}
 }

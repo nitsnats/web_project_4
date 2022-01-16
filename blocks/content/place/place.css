@@ -1,6 +1,5 @@
 .place{
-    position: relative;
-    margin: 80px 0 0 0;
-    width: 460px;
+    display: block;
+    max-width: 460px;
+    border: solid 2px burlywood;
 }
-

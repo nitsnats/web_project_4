@@ -1,11 +1,12 @@
 .description__subtitle{
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 34px;
-    text-align: start;
-    margin: 40px 412px 0 148px;
-    overflow: hidden;
-    max-width: 720px;
-    height: 102px;   
+    font-size: 1.5rem;
+    line-height: 1.5;
+    /*text-align: start;*/
+    padding-top: 40px;
+    /*margin: 40px 412px 0 148px;*/
+    /*overflow: hidden;*/
+    
+    
 }

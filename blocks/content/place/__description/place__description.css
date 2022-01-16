@@ -1,3 +1,15 @@
 .place__description{
-    margin: 48px 0;
+    /*display: flex;
+    flex-direction: column;
+    grid-area: description;*/
+    display: block;
+    max-width: 484px;
+    border: solid 2px darkgreen;
+}
+
+@media screen and (max-width: 320px) and (min-width: 767px){
+.place__description {
+align-items: center;
+margin: 0 16px;
+}
 }
