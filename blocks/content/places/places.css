@@ -5,19 +5,10 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-/*
 @media screen and (max-width: 768px) and (min-width: 1279px){
     .places {
         
+     }
 }
 
 @media screen and (max-width: 320px) and (min-width: 767px){
@@ -28,9 +19,10 @@
     
 @media screen and (max-width:768px) {
     .places{
-       width: 100%;
+       margin: auto;
     }
 }
+
 @media screen and (max-width:320px) {
     .places{
         margin: 0 auto;
@@ -38,5 +30,5 @@
     }
 }
 
-*/
+
 

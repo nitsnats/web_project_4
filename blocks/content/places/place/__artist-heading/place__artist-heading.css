@@ -11,27 +11,8 @@
 
 
 
-/*
-
-    font-style: normal;
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    color: #aaaaaa;
-    text-transform: uppercase;
-    margin-top: 192px;
-    border: solid 2px orange;
-}
-
 @media  screen and (max-width:768px) {
 .place__artist-heading{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    text-transform: uppercase;
-    max-width: 50px;
-    height: 15px;
     margin: 0;
 }  
 }
@@ -46,4 +27,4 @@
     height: 15px;
     margin: 0; 
 }  
-}*/
+}

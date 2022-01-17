@@ -12,25 +12,6 @@
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    margin-bottom: 48px;
-    width: 100%;
-    border: solid 2px blue;
-}
-
 .place__image:last-of-type{
     background-color: #c4c4c4;
     position: relative;
@@ -42,11 +23,7 @@
 
 @media screen and (max-width:768px) {
 .place__image{
-    position: absolute;
-    max-width: 340px;
-    margin: 46px 24px 0;
-    left: 0;
-    top: 0;
+    
     }
 }
 @media screen and (max-width:320px) {
@@ -55,4 +32,3 @@
     width: 100%;
     }
 }
-*/

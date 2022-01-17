@@ -8,17 +8,8 @@
 }
 
 
-
-/*
-    display: block;
-    max-width: 484px;
-    border: solid 2px red;
-    margin: 0 0 0 40px;
-}
-
 @media screen and (max-width:768px) {
 .place__artist{
-    margin: 0 24px 0 28px;
     max-width: 352px;
     }
 }
@@ -27,7 +18,7 @@
 @media screen and (max-width: 320px) and (min-width: 767px){
 .place__artist {
     margin: 0 16px;
-    /*align-items: center;
+    align-items: center;
     }
 }
 
@@ -36,4 +27,4 @@
     margin: 0 16px;
     max-width: 288px;
     }
-}*/
+}
