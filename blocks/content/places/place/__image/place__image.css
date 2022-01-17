@@ -1,14 +1,10 @@
 .place__image{
     width: 100%;
-    border: solid 2px blue;
-}
-
-
-@media screen and (max-width:768px) {
-.place__image{
     
-    }
+   /* border: solid 2px blue;*/
 }
+
+
 @media screen and (max-width:320px) {
 .places__image{
     position: absolute;

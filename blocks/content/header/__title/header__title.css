@@ -9,17 +9,11 @@
     padding-top: 90px;
 }
 
-  
-
-    
-        
-    
-    
 
 @media screen and (max-width: 1280px) and (min-width: 768px){
     .header__title{
         width: 90%;
-        border: rgb(73, 226, 43) 2px solid;
+        /*border: rgb(73, 226, 43) 2px solid;*/
     }
 }
 
@@ -29,7 +23,7 @@
         text-align: center;
         font-weight: 900;
         font-size: 6rem;
-        border: rgb(43, 70, 226) 2px solid;
+        /*border: rgb(43, 70, 226) 2px solid;*/
         box-sizing: border-box;
     }
 }
@@ -46,7 +40,7 @@
 @media screen and (min-width: 320px) and (max-width: 768px){    
     .header__title{
         width: 100%;
-        border: rgb(226, 43, 43) 2px solid;
+        /*border: rgb(226, 43, 43) 2px solid;*/
         box-sizing: border-box;
     }
 }
@@ -57,7 +51,7 @@
         text-align: center;
         font-weight: 900;
         font-size: 2.5rem;
-        border: rgb(226, 43, 171) 2px solid;
+        /*border: rgb(226, 43, 171) 2px solid;*/
         width: 100%;
     }
 }

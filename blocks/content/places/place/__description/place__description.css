@@ -3,7 +3,7 @@
     grid-area: description;
     display: flex;
     flex-direction: column; 
-    border: solid 2px darkgreen;
+    /*border: solid 2px darkgreen;*/
 }
 
 @media screen and (max-width: 768px){

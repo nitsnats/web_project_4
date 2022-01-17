@@ -12,7 +12,7 @@
     border-radius: 4px;
     transition: background-color 0.5s ease;
     grid-area: button;
-    border: solid 2px lightgreen;
+    /*border: solid 2px lightgreen;*/
     height: min-content;
 }
  
@@ -21,24 +21,13 @@ background-color: #0063D2;
 
 }
 
-
-@media screen and (max-width: 768px) and (min-width: 1279px){
-    .place__button {
-    }       
-}
-
 @media screen and (max-width: 320px) and (min-width: 767px){
 .place__button {
     margin: 0 16px;
     max-width: 288px;
      }
 }
-    
-@media screen and (max-width:768px) {
-    .place__button{
-        
-    }
-}
+
 @media screen and (max-width:320px) {
     .place__button{
         margin: 0 16px;

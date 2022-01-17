@@ -21,7 +21,7 @@
         "title artist"
         "image description"
         "button description";
-    border: solid2px springgreen;
+    /*border: solid2px springgreen;*/
     }
 }
 
@@ -39,7 +39,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;*/
     /*grid-gap: 30px;*/
-   /* grid-template-areas:
+    /*grid-template-areas:
         "title"
         "artist"
         "image"
