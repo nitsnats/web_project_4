@@ -3,7 +3,7 @@
     border-style: none;
     justify-content: center;
     align-items: center;
-    margin: 64px 148px 0;
+    margin: 64px 148px 0 148px;
     filter: grayscale(100%);
 }
 

@@ -1,12 +1,10 @@
 .place__artist{
-    /*display: block;*/
     display: flex;
     flex-direction: column;
     align-self: flex-end;
     max-width: 484px;
     grid-area: artist;
     border: solid 2px red;
-    /*margin: 0 0 0 40px;*/
 }
 
 

@@ -1,10 +1,20 @@
 .header__title{
-    margin: 90px auto 0;
+    max-width: 793;
+    font-style: normal;
     text-align: center;
     font-weight: 900;
     font-size: 5.5rem;
-    width: 60vw;
+    max-width: 793px;
+    margin: auto;
+    padding-top: 90px;
 }
+
+  
+
+    
+        
+    
+    
 
 @media screen and (max-width: 1280px) and (min-width: 768px){
     .header__title{

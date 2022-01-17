@@ -1,20 +1,15 @@
 .place__title{
-    /*max-width: 400px;*/
         font-size: 4.5rem;
         font-style: normal;
         font-weight: 900;
         margin-top: 92px;
         text-align: left;
         grid-area: title;
-        display: flex;
-        align-items: flex-end;
         margin-bottom: 0;
 }
 
     
-    
-    ;
-    
+
     
 
 

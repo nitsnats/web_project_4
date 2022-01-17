@@ -1,8 +1,9 @@
 .place__description{
-    /*margin-top: 48px;*/
-    display: block;
     max-width: 484px;
     grid-area: description;
+    display: flex;
+    flex-direction: column; 
+    align-self: flex-end;   
     border: solid 2px darkgreen;
 }
 
