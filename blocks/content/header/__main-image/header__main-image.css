@@ -1,11 +1,10 @@
 .header__main-image{
-    max-width: 948px;
-    border-style: none;
-    justify-content: center;
-    align-items: center;
-    margin: 64px 148px 0 148px;
+    display: block;
+width: 100%;
+margin: auto;
     filter: grayscale(100%);
 }
+
 
 @media screen and (max-width:768px) {
 .header__main-image{

@@ -30,13 +30,24 @@
         font-weight: 900;
         font-size: 6rem;
         border: rgb(43, 70, 226) 2px solid;
+        box-sizing: border-box;
     }
+}
+
+@media screen and (max-width:600px){
+    .header__title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 4rem;
+    box-sizing: border-box;
+    } 
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){    
     .header__title{
         width: 100%;
         border: rgb(226, 43, 43) 2px solid;
+        box-sizing: border-box;
     }
 }
 

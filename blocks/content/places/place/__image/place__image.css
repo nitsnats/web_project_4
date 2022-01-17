@@ -3,14 +3,6 @@
     border: solid 2px blue;
 }
 
-.place__image:last-of-type{
-    background-color: #c4c4c4;
-    position: relative;
-    overflow: hidden;
-    text-indent: -10000px;
-    max-width: 460px;
-    
-}
 
 .place__image:last-of-type{
     background-color: #c4c4c4;

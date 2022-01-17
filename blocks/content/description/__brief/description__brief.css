@@ -1,7 +1,14 @@
 .description__brief{
     margin-left: 148px;
-    max-width: 70%;
+    
     /*border: chartreuse 2px solid;*/
+}
+
+@media screen and (max-width: 320px) and (min-width: 880px){
+    .description__brief{
+        margin-left: 24px;
+        margin-right: 24px;
+    }
 }
 
 @media screen and (max-width:768px) {

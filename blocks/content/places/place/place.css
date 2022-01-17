@@ -3,30 +3,36 @@
     flex-direction: column;
     align-self: flex-end;
     border: solid 2px burlywood;
+    margin-left: 148px;
+    margin-right: 148px;
+        padding: 0;
+        list-style-type: none;
 }
 
 
 @media screen and (max-width: 768px) and (min-width: 1279px){
     .place {
-
+        margin-left: 148px;
+    margin-right: 148px;
     }    
 }
 
 @media screen and (max-width: 320px) and (min-width: 767px){
     .place {
-        
+        margin-left: 24px;
+    margin-right: 24px;
         }
     }
     
 @media screen and (max-width:768px) {
     .place{
-        
+        margin-left: 24px;
+    margin-right: 24px;
     }
 }
 @media screen and (max-width:320px) {
     .place{
-        margin: 0 16px 0 16px;
-        padding: 0;
-        list-style-type: none;
+        margin-left: 16px;
+    margin-right: 16px;
     }
 }
