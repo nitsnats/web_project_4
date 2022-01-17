@@ -20,9 +20,10 @@
     opacity: 0;
 }
 
-@media screen and (max-width: 320px) and (min-width: 880px){
+@media screen and (max-width: 880px){
     .cover{
         min-height: 746px ;
+        margin: 92px 0;
     }
 }
 
@@ -30,7 +31,7 @@
 @media screen and (max-width:768px) {
     .cover{
         min-height: 746px ;
-        
+        margin: 92px 0;
         
     }
 }
