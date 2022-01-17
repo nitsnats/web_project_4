@@ -12,6 +12,26 @@
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.5s ease;
+    grid-template-areas: button;
+    border: solid 2px lightgreen;
+}
+
+
+
+/*
+    background: #0278fe;
+    margin-top: 48px;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 13px 20px;
+    justify-self: start;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.5s ease;
     border: solid 2px lightgreen;
 }
 
@@ -45,3 +65,4 @@ background-color: #0063D2;
         max-width: 288px;
     }
 }
+*/

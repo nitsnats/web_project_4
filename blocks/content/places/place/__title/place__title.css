@@ -1,4 +1,18 @@
 .place__title{
+    max-width: 400px;
+        font-size: 4.5rem;
+        font-style: normal;
+        font-weight: 900;
+        margin-top: 92px;
+        text-align: left;
+        grid-area: title;
+    
+}
+
+
+
+/*
+
         max-width: 400px;
         font-size: 4.5rem;
         font-style: normal;
@@ -44,6 +58,6 @@
     margin: 62px auto;
     }
 }
-
+*/
 
 

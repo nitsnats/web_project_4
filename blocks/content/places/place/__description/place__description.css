@@ -2,6 +2,15 @@
     margin-top: 48px;
     display: block;
     max-width: 484px;
+    grid-area: description;
+    border: solid 2px darkgreen;
+}
+
+
+/*
+    margin-top: 48px;
+    display: block;
+    max-width: 484px;
     border: solid 2px darkgreen;
 }
 
@@ -10,4 +19,4 @@
     align-items: center;
     margin: 0 16px;
     }
-}
+}*/

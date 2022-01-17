@@ -1,7 +1,7 @@
 .photo-gallery{
   margin: 118px 48px 0 48px;
   /*border: solid 2px red;*/
-  width: 90vw;
+  max-width: 1184px;
 }
   
 
