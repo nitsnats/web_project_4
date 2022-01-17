@@ -11,12 +11,6 @@
         margin-left: 24px;
      }
 }
-/*
-@media screen and (max-width: 320px) and (min-width: 767px){
-    .places {
-        
-        }
-    }*/
     
 @media screen and (max-width:768px) {
     .places{

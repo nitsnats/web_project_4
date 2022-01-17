@@ -4,15 +4,6 @@
 }
 
 
-.place__image:last-of-type{
-    background-color: #c4c4c4;
-    position: relative;
-    overflow: hidden;
-    text-indent: -10000px;
-    max-width: 460px;
-    
-}
-
 @media screen and (max-width:768px) {
 .place__image{
     

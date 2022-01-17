@@ -21,7 +21,7 @@
 @media screen and (max-width:320px) {
     .description__brief{
         margin: 0 16px;
-        ;
+        
         /*border: rgb(255, 0, 234) 2px solid;*/
     }
 }
