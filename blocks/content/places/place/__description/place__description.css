@@ -1,5 +1,5 @@
 .place__description{
-    margin-top: 48px;
+    /*margin-top: 48px;*/
     display: block;
     max-width: 484px;
     grid-area: description;

@@ -1,7 +1,6 @@
 .place__image{
-    margin-bottom: 48px;
+    /*margin-bottom: 48px;*/
     width: 100%;
-    grid-area: image;
     border: solid 2px blue;
 }
 
@@ -13,6 +12,15 @@
     max-width: 460px;
     
 }
+
+
+
+
+
+
+
+
+
 
 
 

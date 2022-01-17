@@ -1,13 +1,14 @@
 .place__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content 1fr;
     grid-gap: 48px 40px;
     grid-template-areas:
         "title artist"
         "image description"
         "button description";
     border: solid2px springgreen;
+    
 }
 
 
