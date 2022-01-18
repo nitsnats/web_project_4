@@ -24,22 +24,22 @@
     /*border: solid2px springgreen;*/
     }
 }
-
+/*
 @media screen and (max-width:600px){
     .place__item{
         display: flex;
         flex-direction: column;
         }
-}
-/*
-@media screen and (max-width:320px) {
+}*/
+
+@media screen and (max-width:600px) {
 .place__item{
-    margin: 0;
+    margin: 0 0 64px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;*/
-    /*grid-gap: 30px;*/
-    /*grid-template-areas:
+    grid-template-rows: 0.1fr 0.1fr 0.3fr auto auto;
+    grid-gap: 30px;
+    grid-template-areas:
         "title"
         "artist"
         "image"
@@ -47,4 +47,5 @@
         "link";
     align-items: center
     }
-}*/
+}
+
