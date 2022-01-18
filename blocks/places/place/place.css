@@ -4,7 +4,15 @@
     align-self: flex-end;
     /*border: solid 2px burlywood;*/
     margin: 0 16px 0 16px;
-        padding: 0;
-        list-style-type: none;
+    padding: 0;
+    list-style-type: none;
 }
 
+@media screen and (max-width:600px) {
+    .place{
+        margin: 0 16px 0 16px;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+}
