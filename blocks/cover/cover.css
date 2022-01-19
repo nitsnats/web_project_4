@@ -20,13 +20,13 @@
 .cover:hover .overlay{
     opacity: 0;
 }
-
+/*
 @media screen and (max-width: 880px){
     .cover{
         max-height: 746px;
         margin: 92px 0;
     }
-}
+}*/
 
 
 @media screen and (max-width:768px) {

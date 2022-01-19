@@ -11,8 +11,6 @@
 @media screen and (max-width:768px){
   .photo-grid{
     grid-gap:16px;
-    justify-content: center;
-    align-items: center;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
     /*border: solid 2px rgb(255, 0, 212);*/
@@ -21,7 +19,6 @@
 
 @media screen and (max-width:320px){
   .photo-grid{
-    justify-content: center;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(8, auto);
     /*border: solid 2px rgb(76, 0, 255);*/

@@ -1,8 +1,8 @@
 .place__artist-name{
     font-style: normal;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 22px;
     text-align: left;
     margin: 0;
     /*border: solid 2px yellow;*/
@@ -11,11 +11,6 @@
 
 @media screen and (max-width:320px) {
     .place__artist-name{
-        font-style: normal;
-        font-size: 1.1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: left;
         margin: 8px 16px 0 16px; 
     }
 }

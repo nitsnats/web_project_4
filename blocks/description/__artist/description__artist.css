@@ -1,6 +1,10 @@
 .description__artist{
-    font-weight: normal;
-    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
     text-align: right;
+    margin: 0;
+    margin-top: 10px;
 }
 

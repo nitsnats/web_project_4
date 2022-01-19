@@ -1,17 +1,20 @@
 .header__title{
     max-width: 793px;
+    font-size: 96px;
     font-style: normal;
-    text-align: center;
     font-weight: 900;
-    font-size: 5.5rem;
-    margin: auto;
-    padding-top: 90px;
+    line-height: 100px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin: 90px auto 0;
 }
 
 
 @media screen and (max-width: 1280px) and (min-width: 768px){
     .header__title{
-        width: 90%;
+        
         /*border: rgb(73, 226, 43) 2px solid;*/
     }
 }
@@ -19,38 +22,27 @@
 @media screen and (max-width:768px) {
     .header__title{
         margin: 90px 0 0;
-        text-align: center;
-        font-weight: 900;
-        font-size: 6rem;
+        font-size: 96px;
         /*border: rgb(43, 70, 226) 2px solid;*/
         box-sizing: border-box;
     }
 }
 
-@media screen and (max-width:600px){
-    .header__title{
-    text-align: center;
-    font-weight: 900;
-    font-size: 4rem;
-    box-sizing: border-box;
-    } 
-}
 
 @media screen and (min-width: 320px) and (max-width: 768px){    
     .header__title{
-        width: 100%;
+        
         /*border: rgb(226, 43, 43) 2px solid;*/
-        box-sizing: border-box;
+        
     }
 }
 
 @media screen and (max-width:320px) {
     .header__title{
         margin: 51px auto 0;
-        text-align: center;
-        font-weight: 900;
-        font-size: 2.5rem;
+        font-size: 40px;
+        line-height: 44px;
         /*border: rgb(226, 43, 171) 2px solid;*/
-        width: 100%;
+        
     }
 }

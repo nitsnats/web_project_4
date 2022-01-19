@@ -1,7 +1,7 @@
 .cover__subtitle{
     margin: 0 auto 0;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
@@ -9,11 +9,25 @@
     
 }
 
-  
 .cover__subtitle:first-of-type{
     margin: 32px auto 0;
 }
 
 .cover__subtitle:last-of-type{
     margin: 0 auto 32px;
+}
+
+@media screen and (max-width: 320px) {
+    .cover__subtitle {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .cover__subtitle:first-of-type{
+        margin: 16px auto 0;
+    }
+    
+    .cover__subtitle:last-of-type{
+        margin: 0 auto 16px;
+    }    
 }

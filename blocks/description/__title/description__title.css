@@ -1,25 +1,26 @@
 .description__title{
 font-style: normal;
 font-weight: 900;
-font-size: 3.3rem;
+font-size: 54px;
+line-height: 58px;
+margin: 0;
+margin-top: 92px;
 /*border: rgb(135, 71, 255) 2px solid;*/
 }
 
-@media screen and (max-width: 880px){
+@media screen and (max-width: 768px){
 .description__title{
-    font-size: 2.9rem;    
+    margin-top: 88px;   
     }
 }
-/*
-@media screen and (min-width:320px) and (max-width:550px){
-    .description__title{
-        font-size: 2.5rem;    
-        }
-    }*/
+
 
 @media screen and (max-width:320px) {
 .description__title{
-    font-size: 2rem;
+    font-size: 32px;
+    line-height: 35px;
+    margin: 0;
+    margin-top: 64px;
     }
 }
 
