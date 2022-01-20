@@ -8,12 +8,12 @@
   /*border: solid 2px rgb(187, 255, 0);*/
 }
 
-
+/*
 @media screen and (max-width:1700px) {
   .photo-grid{
     
   }
-}
+}*/
 
 @media screen and (max-width:768px){
   .photo-grid{

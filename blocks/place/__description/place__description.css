@@ -10,6 +10,7 @@
     .place__description {
         max-width: 90%;
         }
+}    
         
 @media screen and (max-width: 768px){
     .place__description {
