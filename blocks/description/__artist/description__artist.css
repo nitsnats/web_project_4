@@ -8,3 +8,9 @@
     margin-top: 10px;
 }
 
+@media screen and (max-width:320px) {
+    .description__artist{
+        max-width: 320px;
+    }
+    
+}

@@ -22,14 +22,16 @@
     }
 }
 
-/*
+
 @media screen and (min-width: 320px) and (max-width: 500px){    
     .header__title{
+        margin: 51px 20px 0;
+        font-size: 40px;
+        line-height: 44px;
         
-        border: rgb(226, 43, 43) 2px solid;
         
     }
-}*/
+}
 
 @media screen and (max-width:320px) {
     .header__title{
