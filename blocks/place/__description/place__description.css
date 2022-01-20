@@ -6,6 +6,11 @@
     /*border: solid 2px darkgreen;*/
 }
 
+@media screen and (max-width: 1700px){
+    .place__description {
+        max-width: 90%;
+        }
+        
 @media screen and (max-width: 768px){
     .place__description {
         max-width: 352px;

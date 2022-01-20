@@ -4,6 +4,13 @@
     max-width: 1184px;
   }
 
+  @media screen and (max-width:1700px) {
+    .photo-gallery{
+      margin: 118px auto 0;
+      max-width: 1184px;
+        }
+    }
+
 @media screen and (max-width:768px) {
 .photo-gallery{
   margin: 90px 24px 0 24px;
