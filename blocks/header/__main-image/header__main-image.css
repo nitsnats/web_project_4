@@ -8,7 +8,7 @@
 
 @media screen and (max-width:768px) {
 .header__main-image{
-    max-width: 100%;
+    max-width: 768px;
     border-style: none;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,18 @@
 }
 
 /*
-@media screen and (min-width: 320px) and (min-width: 768px){
+@media screen and (min-width: 320px) and (max-width: 500px){
 .header__main-image{
-    max-width:100%;
-    margin: 0;
+
+    border-style: none;
+    justify-content: center;
+    align-items: center;
     }
 }*/
 
 @media screen and (max-width:320px) {
 .header__main-image{
-    max-height: 200px;
+    max-width:320px;
     height: auto;
     margin: 40px 0 0 0;
     }
