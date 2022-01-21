@@ -23,6 +23,15 @@
     }
 }
 
+
+@media screen and (min-width:600px) and (max-width:768px){
+    .places{
+       margin-right: 24px;
+       margin-left: 24px;
+    }
+}
+
+
 @media screen and (max-width:320px) {
     .places{
         margin: 0 auto;

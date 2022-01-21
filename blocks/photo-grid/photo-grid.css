@@ -15,19 +15,35 @@
   }
 }*/
 
+
+@media screen and (max-width: 768px) {
+  .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*
 @media screen and (max-width:768px){
   .photo-grid{
     grid-gap:16px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
-    /*border: solid 2px rgb(255, 0, 212);*/
+    
+  }
+}*/
+
+
+@media screen and (max-width: 320px) {
+  .photo-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
   }
 }
 
+/*
 @media screen and (max-width:320px){
   .photo-grid{
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(8, auto);
-    /*border: solid 2px rgb(76, 0, 255);*/
+    
   }
-} 
+} */

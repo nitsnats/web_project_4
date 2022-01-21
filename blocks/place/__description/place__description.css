@@ -11,12 +11,15 @@
         max-width: 90%;
         }
 }    
-        
+
+
 @media screen and (max-width: 768px){
     .place__description {
         max-width: 352px;
         }
     }
+
+
 /*
 @media screen and (max-width: 320px) and (min-width: 768px){
 .place__description {
@@ -32,3 +35,10 @@
         
     }
 }
+
+/*
+@media screen and (max-width: 320px) {
+    .description {
+        margin: 64px 16px 90px;
+    }
+}*/
