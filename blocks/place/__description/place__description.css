@@ -20,13 +20,13 @@
     }
 
 
-/*
+
 @media screen and (max-width: 320px) and (min-width: 768px){
 .place__description {
     align-items: center;
     margin: 0 16px;
     }
-}*/
+}
 
 @media screen and (max-width: 320px){
     .place__description {
