@@ -12,3 +12,11 @@
     }
     
 }
+
+@media screen and (max-width:320px) {
+    .place{
+        margin-bottom: 0;
+        list-style-type: none;
+    }
+    
+}

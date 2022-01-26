@@ -49,7 +49,7 @@
 } 
 @media screen and (max-width: 320px) { 
   .places { 
-    margin: 62px 0 0; 
+    margin: 0; 
   } 
 } 
 

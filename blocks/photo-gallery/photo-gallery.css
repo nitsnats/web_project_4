@@ -1,6 +1,5 @@
 .photo-gallery{
     margin: 118px 48px 0 48px;
-    /*border: solid 2px red;*/
     max-width: 1184px;
   }
 
@@ -25,7 +24,7 @@
   }
 }
 
-@media screen and (max-width:319px) {
+@media screen and (max-width:320px) {
 .photo-gallery{
   margin: 90px 16px 0 16px;
   
