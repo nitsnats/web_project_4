@@ -13,10 +13,6 @@
     z-index: 3;
 }
 
-.cover{
- 
-}
-
 .cover:hover .cover__overlay {
   opacity: 0.8;
 }
