@@ -12,18 +12,16 @@
     opacity: 1;
     z-index: 3;
 }
-/*
-.cover:hover .cover__overlay{
-    transition: opacity 0.8 linear 0.25s;
-}*/
 
-.cover:hover .cover__overlay:hover {
-  opacity: 0.9;
+.cover{
+ 
 }
 
-.cover:hover .cover__overlay:not(:hover) {
-  opacity: 0.4;
+.cover:hover .cover__overlay {
+  opacity: 0.8;
 }
+
+
 /*
 @media screen and (min-width:1700px) {
     .cover{
