@@ -1,22 +1,18 @@
-.place__description{
-    /*max-width: 484px;*/
-    grid-area: description;
-    display: flex;
-    flex-direction: column; 
-    /*border: solid 2px darkgreen;*/
-}
-
-
-@media screen and (max-width: 320px) and (min-width: 768px){
 .place__description {
+    grid-area: description;
+  display: flex;
+  flex-direction: column;
+  }
+/*
+@media screen and (max-width: 320px) and (min-width: 768px) {
+  .place__description {
     align-items: center;
     margin: 0 16px;
-    }
-}
+  }
+}*/
 
-@media screen and (max-width: 320px){
-    .place__description {
-        align-items: center;
-                
-    }
+@media screen and (max-width: 320px) {
+  .place__description {
+    align-items: center;
+  }
 }

@@ -26,4 +26,4 @@ The site is divided into several sections:
 
 Nitsa Saban email:nitsnats@hotmail.com
 
-#Project Link:# https://github.com/nitsnats/web_project_3.git
+#Project Link:# https://nitsnats.github.io/web_project_3/

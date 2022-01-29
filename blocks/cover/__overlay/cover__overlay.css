@@ -1,20 +1,12 @@
-.cover__overlay{
-    z-index: 3;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #2a2c2f;
-    opacity: 0.3;
-    /*transition: opacity 0.8s linear 0.25s;*/
+.cover__overlay {
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #2a2c2f;
+  opacity: 0.3;
 }
-/*
-.cover:hover .cover__overlay{
-    transition: opacity 0.8s linear 0.25s;
-}*/
-/*.cover:hover .cover__overlay:hover {
-    opacity: 0.9;
-  }
-  
-  .cover:hover .cover__overlay:not(:hover) {
-    opacity: 0.4;
-  }*/
+
+.cover:hover .cover__overlay {
+  opacity: 0.8;
+}

@@ -11,95 +11,87 @@
   <body class="root">
     <div class="page">
       <header class="header">
-        <div class="logo">
-          <img class="logo__image" src="./images/__logo.svg" alt="Logo image" />
-        </div>
-        <h1 class="header__title">From Homeland to Homeland</h1>
-        <p class="header__subtitle">
-          An epic journey from Kentucky to Burundi through Wales and Ukraine
-        </p>
-        <img
-          src="./images/kalegin-michail-179870-unsplash.jpg"
-          class="header__main-image"
-          alt="Homeland 2 Homeland"
-        />
+        <img class="header__image" src="./images/__logo.svg" alt="Logo image" />
       </header>
 
       <main class="content">
+        <section class="lead">
+          <h1 class="lead__title">From Homeland to Homeland</h1>
+          <p class="lead__subtitle">
+            An epic journey from Kentucky to Burundi through Wales and Ukraine
+          </p>
+          <img
+            src="./images/kalegin-michail-179870-unsplash.jpg"
+            class="lead__main-image"
+            alt="Homeland 2 Homeland"
+          />
+        </section>
         <section class="description">
-            <h2 class="description__title">
-              Know the places your online pals come from a little better
-            </h2>
-            <p class="description__subtitle">
-              Every human being is an artist, a freedom being, called to
-              participate in transforming and reshaping the conditions,
-              thinking, and structures that shape and inform our lives.
-            </p>
-            <p class="description__artist">— Joseph Beuys</p>
-            <p class="description__text">
-              The town of Practicum has brought together professionals from
-              different corners of the world. Today, Practicum Art Gallery is
-              proud to present stories and pictures from some of the people who
-              dedicate their time and effort to making the future tech
-              professionals of this town feel at home. Each of us has a unique
-              story about the place we come from. Feel free to add your own
-              story and a piece of visual art dedicated to your hometown to our
-              collection. No matter where you're from, we're glad that you're
-              our neighbor.
-            </p>
-          </section>
+          <h2 class="description__title">
+            Know the places your online pals come from a little better
+          </h2>
+          <p class="description__subtitle">
+            Every human being is an artist, a freedom being, called to
+            participate in transforming and reshaping the conditions, thinking,
+            and structures that shape and inform our lives.
+          </p>
+          <p class="description__artist">— Joseph Beuys</p>
+          <p class="description__text">
+            The town of Practicum has brought together professionals from
+            different corners of the world. Today, Practicum Art Gallery is
+            proud to present stories and pictures from some of the people who
+            dedicate their time and effort to making the future tech
+            professionals of this town feel at home. Each of us has a unique
+            story about the place we come from. Feel free to add your own story
+            and a piece of visual art dedicated to your hometown to our
+            collection. No matter where you're from, we're glad that you're our
+            neighbor.
+          </p>
+        </section>
 
         <section class="photo-gallery">
-          <div class="photo-grid">
-            <img
-              src="./images/__item1.jpg"
-              class="photo-grid__image"
-              alt="image1"
-            />
-            <img
-              src="./images/__item2.jpg"
-              class="photo-grid__image"
-              alt="image2"
-            />
-            <img
-              src="./images/__item3.jpg"
-              class="photo-grid__image"
-              alt="image3"
-            />
-            <img
-              src="./images/__item4.jpg"
-              class="photo-grid__image"
-              alt="image4"
-            />
-            <img
-              src="./images/__item5.jpg"
-              class="photo-grid__image"
-              alt="image5"
-            />
-            <img
-              src="./images/__item6.jpg"
-              class="photo-grid__image"
-              alt="image6"
-            />
-            <img
-              src="./images/__item7.jpg"
-              class="photo-grid__image"
-              alt="image7"
-            />
-            <img
-              src="./images/__item8.jpg"
-              class="photo-grid__image"
-              alt="image8"
-            />
-          </div>
+          <ul class="photo-grid">
+            <li class="photo-grid__image">
+              <img src="./images/__item1.jpg" alt="image1" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item2.jpg" alt="image2" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item3.jpg" alt="image3" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item4.jpg" alt="image4" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item5.jpg" alt="image5" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item6.jpg" alt="image6" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item7.jpg" alt="image7" />
+            </li>
+            <li class="photo-grid__image">
+              <img src="./images/__item8.jpg" alt="image8" />
+            </li>
+          </ul>
         </section>
 
         <section class="places">
-          <ul class="place">
-            <li class="place__item">
+          <div class="place">
+            <div class="place__item">
               <h2 class="place__title">Kyiv, Ukraine</h2>
-              <img class="place__image" src="images/kyiv_ukraine.jpg" alt="kyiv ukraine image"/>
-              <a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" class="place__button">Buy this artwork as NFT</a>
+              <img
+                class="place__image"
+                src="images/kyiv_ukraine.jpg"
+                alt="kyiv ukraine image"
+              />
+              <a
+                href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+                class="place__button"
+                >Buy this artwork as NFT</a
+              >
               <div class="place__artist">
                 <p class="place__artist-heading">Artist</p>
                 <p class="place__artist-name">
@@ -125,23 +117,25 @@
                   the far outskirts of the right one.
                 </p>
               </div>
-            </li>
+            </div>
 
-            <li class="place__item">
+            <div class="place__item">
               <h2 class="place__title">Cricieth, Wales</h2>
               <img
                 class="place__image"
                 src="images/cricieth_wales.jpg"
                 alt="cricieth wales image"
               />
-              <a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" class="place__button">Buy this artwork as NFT</a>
+              <a
+                href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+                class="place__button"
+                >Buy this artwork as NFT</a
+              >
               <div class="place__artist">
                 <p class="place__artist-heading">Artist</p>
+                <p class="place__artist-name">Steffan Warren, lead editor</p>
                 <p class="place__artist-name">
-                  Steffan Warren, lead editor 
-                </p>
-                <p class="place__artist-name">
-                   Kseniya Glagoleva, project manager
+                  Kseniya Glagoleva, project manager
                 </p>
               </div>
               <div class="place__description">
@@ -164,12 +158,20 @@
                   the UK.
                 </p>
               </div>
-            </li>
+            </div>
 
-            <li class="place__item">
+            <div class="place__item">
               <h2 class="place__title">Berea, USA</h2>
-              <img class="place__image" src="images/berea_usa.jpg" alt="berea usa image" />
-              <a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" class="place__button">Buy this artwork as NFT</a>
+              <img
+                class="place__image"
+                src="images/berea_usa.jpg"
+                alt="berea usa image"
+              />
+              <a
+                href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+                class="place__button"
+                >Buy this artwork as NFT</a
+              >
 
               <div class="place__artist">
                 <p class="place__artist-heading">Artist</p>
@@ -196,16 +198,20 @@
                   every student receives  a full-tuition scholarship.
                 </p>
               </div>
-            </li>
+            </div>
 
-            <li class="place__item">
+            <div class="place__item">
               <h2 class="place__title">Muramvya, Burundi</h2>
               <img
                 class="place__image"
                 src="images/muramvya_burundi.jpg"
                 alt="muramvya burundi image"
               />
-              <a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" class="place__button">Buy this artwork as NFT</a>
+              <a
+                href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+                class="place__button"
+                >Buy this artwork as NFT</a
+              >
               <div class="place__artist">
                 <p class="place__artist-heading">Artist</p>
                 <p class="place__artist-name">
@@ -238,12 +244,20 @@
                   the country.
                 </p>
               </div>
-            </li>
+            </div>
 
-            <li class="place__item">
+            <div class="place__item">
               <h2 class="place__title">Zarit Israel</h2>
-               <img class="place__image" src="images/Zarit.jpg" alt="Zarit image" />
-                <a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" class="place__button">Buy this artwork as NFT</a>
+              <img
+                class="place__image"
+                src="images/Zarit.jpg"
+                alt="Zarit image"
+              />
+              <a
+                href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+                class="place__button"
+                >Buy this artwork as NFT</a
+              >
               <div class="place__artist">
                 <p class="place__artist-heading">Artist</p>
                 <p class="place__artist-name">Nitsa Saban</p>
@@ -251,29 +265,35 @@
               <div class="place__description">
                 <p class="place__paragraph">
                   Moshav Zarit is located near the Israeli-Lebanese border. The
-                  moshav rises to a height of 650 m above sea level and
-                  belongs to the Ma'ale Yosef Regional Council. Today, the
-                  moshav has about 300 residents. Moshav Zarit was established
-                  as part of Operation "Finally" which was launched with the aim
-                  of increasing Hebrew settlement in the Galilee region. Named
+                  moshav rises to a height of 650 m above sea level and belongs
+                  to the Ma'ale Yosef Regional Council. Today, the moshav has
+                  about 300 residents. Moshav Zarit was established as part of
+                  Operation "Finally" which was launched with the aim of
+                  increasing Hebrew settlement in the Galilee region. Named
                   after the bird 'Zarit' with the black body and the yellow beak
                   whose song can be heard throughout the seat. Near the moshav,
                   a variety of fascinating hiking trails await visitors.
                 </p>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </section>
 
         <section class="cover">
           <div class="cover__group">
             <h2 class="cover__title">Visit us</h2>
-            <p class="cover__subtitle">Year-round&#10;Practicum Art Gallery&#10;404 Tim Berners-Lee Ave</p>
-            <a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" class="cover__button">Buy tickets</a>
+            <p class="cover__subtitle">
+              &emsp; &emsp; &emsp; &ensp; Year-round&emsp; &emsp; &emsp; &emsp;
+              &emsp;Practicum Art Gallery &emsp; &emsp;404 Tim Berners-Lee Ave
+            </p>
+            <a
+              href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+              class="cover__button"
+              >Buy tickets</a
+            >
             <div class="cover__overlay"></div>
           </div>
         </section>
-
       </main>
 
       <footer class="footer">

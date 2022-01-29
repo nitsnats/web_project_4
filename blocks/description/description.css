@@ -1,19 +1,16 @@
-.description{
-    max-width: 984px;
-    margin: 0 auto;
+.description {
+  max-width: 984px;
+  margin: 0 auto;
 }
-
 
 @media screen and (max-width: 1024px) {
-    .description {
-        margin: 0 24px 90px;
-    }
+  .description {
+    margin: 0 24px 90px;
+  }
 }
 
-    
 @media screen and (max-width: 480px) {
-        .description {
-            margin: 0 16px 90px;
-        }
-    }  
-    
+  .description {
+    margin: 0 16px 90px;
+  }
+}

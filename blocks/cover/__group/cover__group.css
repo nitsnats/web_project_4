@@ -1,8 +1,8 @@
-.cover__group{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    position: relativea;
-    
+.cover__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  /*position: relative;*/
+  margin: auto;
 }

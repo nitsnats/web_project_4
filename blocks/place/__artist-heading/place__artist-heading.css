@@ -1,26 +1,19 @@
-.place__artist-heading{
-    font-style: normal;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15px;
-    text-align: left;
-    color: #aaaaaa;
-    text-transform: uppercase;
-    /*border: solid 2px orange;*/
+.place__artist-heading {
+  margin: 0 0 8px 0;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: left;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  /*border: solid 2px orange;*/
 }
 
 
-
-@media  screen and (max-width:768px) {
-.place__artist-heading{
-    margin: 0;
-}  
-}
-
-@media  screen and (max-width:320px) {
-.place__artist-heading{
-    max-width: 50px;
+@media screen and (max-width: 320px) {
+  .place__artist-heading {
     height: 15px;
-    margin: 0; 
-}  
+  }
 }

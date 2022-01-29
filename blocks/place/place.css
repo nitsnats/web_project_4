@@ -1,22 +1,12 @@
-.place{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    
+.place {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
-@media screen and (max-width:600px) {
-    .place{
-        padding: 0;
-        list-style-type: none;
-    }
-    
-}
-
-@media screen and (max-width:320px) {
-    .place{
-        margin-bottom: 0;
-        list-style-type: none;
-    }
-    
+@media screen and (max-width: 320px) {
+  .place {
+    margin-bottom: 0;
+  }
 }
