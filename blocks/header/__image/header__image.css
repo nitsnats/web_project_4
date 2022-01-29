@@ -2,3 +2,11 @@
   max-width: 100%;
   margin: 34px auto 0;
 }
+
+@media screen and (max-width:320px) {
+  .header__image{
+    max-width: 200px;
+    margin: 20px auto 0;
+  }
+  
+}
