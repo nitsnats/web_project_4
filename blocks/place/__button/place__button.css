@@ -21,6 +21,13 @@
   background-color: #0063d2;
 }
 
+@media screen and (max-width: 700px) {
+  .place__button {
+    margin-bottom: 50px;
+    min-width: 288px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .place__button {
     margin: 0 16px;
