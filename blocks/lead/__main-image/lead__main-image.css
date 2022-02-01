@@ -14,14 +14,6 @@
   }
 }
 
-@media screen and (max-width: 550px) {
-  .lead__main-image {
-    border-style: none;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 @media screen and (max-width: 320px) {
   .lead__main-image {
     max-width: 320px;

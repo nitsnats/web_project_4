@@ -9,10 +9,3 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
-
-
-@media screen and (max-width: 320px) {
-  .place__artist-heading {
-    height: 15px;
-  }
-}

@@ -1,9 +1,8 @@
 .place__description {
-    grid-area: description;
+  grid-area: description;
   display: flex;
   flex-direction: column;
-  }
-
+}
 
 @media screen and (max-width: 320px) {
   .place__description {

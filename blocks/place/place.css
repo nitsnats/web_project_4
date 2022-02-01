@@ -4,9 +4,3 @@
   padding: 0;
   margin: 0;
 }
-
-@media screen and (max-width: 320px) {
-  .place {
-    margin-bottom: 0;
-  }
-}
