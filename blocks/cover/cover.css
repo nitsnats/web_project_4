@@ -27,9 +27,9 @@
     /*margin: 92px 0;*/
   }
 }
+
 @media screen and (max-width: 320px) {
   .cover {
-    background-size: cover;
-    margin-top: 64px;
+    margin-top: 14px;
   }
 }

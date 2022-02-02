@@ -13,7 +13,6 @@
   border-radius: 4px;
   transition: background-color 0.5s ease;
   grid-area: button;
-  margin-bottom: 80px;
   height: min-content;
 }
 
@@ -29,7 +28,7 @@
 
 @media screen and (max-width: 320px) {
   .place__button {
-    margin: 0 16px;
+    margin: 0 16px 50px;
     min-width: 288px;
   }
 }

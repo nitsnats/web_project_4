@@ -7,12 +7,17 @@
     "title artist"
     "image description"
     "button description";
-  margin-bottom: 72px;
+  margin-bottom: 80px;
+}
+
+.place:last-of-type {
+  margin-bottom: 92px;
 }
 
 @media screen and (max-width: 768px) {
   .place {
     grid-template-rows: min-content min-content 1fr;
+    margin-bottom: 72px;
   }
 }
 
@@ -29,5 +34,11 @@
       "description"
       "button";
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .place:last-of-type {
+    margin-bottom: 0;
   }
 }
