@@ -9,28 +9,6 @@
   </head>
 
   <body class="root">
-    <section class="popup__profile">
-      <div class="popup__item">
-        <form class="popup__form" name="naw">
-          <h3 class="popup__title">Edit Profile</h3>
-          <input
-            class="popup__input popup__input_name"
-            type="text"
-            name="Name"
-            placeholder="Name"
-          />
-          <input
-            class="popup__input popup__input_profession"
-            type="text"
-            name="Profession"
-            placeholder="About me"
-          />
-          <button type="submit" class="popup__save">Save</button>
-          <button type="button" class="popup__close"></button>
-        </form>
-      </div>
-    </section>
-
     <div class="page">
       <header class="header">
         <img class="header__image" src="./images/logo.svg" alt="Logo image" />
@@ -47,12 +25,16 @@
           </div>
           <div class="profile__info">
             <div class="profile__item">
-              <h1 class="profile__name">Jacques Cousteau</h1>
+              <h1 class="profile__name profile__name_type_name">
+                Jacques Cousteau
+              </h1>
               <button type="button" class="profile__button"></button>
             </div>
-            <p class="profile__profession">Explorer</p>
+            <p class="profile__profession profile__profession_type_profession">
+              Explorer
+            </p>
           </div>
-          <button type="button" class="profile__add_button"></button>
+          <button type="button" class="profile__add-button"></button>
         </section>
 
         <section class="elements">
@@ -64,7 +46,7 @@
             />
             <div class="element__wrap">
               <h2 class="element__title">Yosemite Valley</h2>
-              <button class="element__button_like" type="button"></button>
+              <button class="element__button-like" type="button"></button>
             </div>
           </article>
           <article class="element">
@@ -75,7 +57,7 @@
             />
             <div class="element__wrap">
               <h2 class="element__title">Lake Louise</h2>
-              <button class="element__button_like" type="button"></button>
+              <button class="element__button-like" type="button"></button>
             </div>
           </article>
           <article class="element">
@@ -86,7 +68,7 @@
             />
             <div class="element__wrap">
               <h2 class="element__title">Bald Mountains</h2>
-              <button class="element__button_like" type="button"></button>
+              <button class="element__button-like" type="button"></button>
             </div>
           </article>
           <article class="element">
@@ -97,7 +79,7 @@
             />
             <div class="element__wrap">
               <h2 class="element__title">Latemar</h2>
-              <button class="element__button_like" type="button"></button>
+              <button class="element__button-like" type="button"></button>
             </div>
           </article>
           <article class="element">
@@ -108,7 +90,7 @@
             />
             <div class="element__wrap">
               <h2 class="element__title">Vanoise National Park</h2>
-              <button class="element__button_like" type="button"></button>
+              <button class="element__button-like" type="button"></button>
             </div>
           </article>
           <article class="element">
@@ -119,7 +101,7 @@
             />
             <div class="element__wrap">
               <h2 class="element__title">Lago di Braies</h2>
-              <button class="element__button_like" type="button"></button>
+              <button class="element__button-like" type="button"></button>
             </div>
           </article>
         </section>
@@ -128,7 +110,29 @@
       <footer class="footer">
         <p class="footer__copyright">© 2021 Around The U.S.</p>
       </footer>
+
+      <div class="popup">
+        <div class="popup__item">
+          <button type="button" class="popup__close" name="close"></button>
+          <form class="popup__form" name="naw">
+            <h3 class="popup__title">Edit Profile</h3>
+            <input
+              class="popup__input popup__input_type_name"
+              type="text"
+              name="Name"
+              placeholder="Name"
+            />
+            <input
+              class="popup__input popup__input_type_profession"
+              type="text"
+              name="Profession"
+              placeholder="About me"
+            />
+            <button type="submit" class="popup__save" name="Save it">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <script src="./index.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
   </body>
 </html>

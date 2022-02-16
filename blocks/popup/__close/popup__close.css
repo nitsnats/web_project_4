@@ -9,4 +9,19 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
+  opacity: 1;
+}
+
+.popup__close:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__close {
+    background-size: 26px;
+    width: 26px;
+    height: 26px;
+    left: calc(50% + 110px);
+  }
 }

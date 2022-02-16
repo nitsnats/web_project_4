@@ -10,6 +10,12 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 18px;
+  opacity: 1;
+}
+
+.profile__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 320px) {
@@ -17,5 +23,6 @@
     width: 18px;
     height: 18px;
     margin: 0px;
+    background-size: auto;
   }
 }
