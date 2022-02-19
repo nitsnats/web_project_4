@@ -12,6 +12,7 @@
   border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 2px;
+  transition: opacity linear 0.35s;
   opacity: 1;
 }
 
@@ -34,6 +35,5 @@
     margin: 36px 19px;
     width: 282px;
     height: 50px;
-    background-size: auto;
   }
 }

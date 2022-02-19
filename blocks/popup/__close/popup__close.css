@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
+  transition: opacity linear 0.35s;
   opacity: 1;
 }
 

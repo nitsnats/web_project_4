@@ -5,6 +5,7 @@
   height: 19px;
   border: 0px;
   background-color: transparent;
+  transition: opacity linear 0.35s;
   opacity: 1;
 }
 
