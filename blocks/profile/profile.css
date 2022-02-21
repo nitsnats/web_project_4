@@ -7,6 +7,12 @@
   max-width: 880px;
 }
 
+@media screen and (max-width: 885px) {
+  .profile {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 785px) {
   .profile {
     width: 90%;
