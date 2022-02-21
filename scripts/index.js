@@ -18,13 +18,14 @@ function closePopup() {
   popup.classList.remove("popup__opened");
 }
 
-function edit(){
+function handleEditButtonClick(){
   popupInputName.value = profileName.textContent;
   popupInputProfession.value = profileProfession.textContent;
-  openPopup();
+  openPopup(popup);
 }
 
-function save(e){
+
+function handleSaveButtonSubmit(e){
   e.preventDefault();
   profileName.textContent = popupInputName.value;
   profileProfession.textContent = popupInputProfession.value;
@@ -33,6 +34,6 @@ function save(e){
 
 
 closeButtonPopup.addEventListener("click", closePopup);
-form.addEventListener("submit", save); 
-editButtonProfile.addEventListener("click", openPopup);
+form.addEventListener("submit", handleSaveButtonSubmit); 
+editButtonProfile.addEventListener("click", handleEditButtonClick);
  
