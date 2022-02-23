@@ -18,7 +18,7 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .popup__close {
     background-size: 26px;
     width: 26px;
