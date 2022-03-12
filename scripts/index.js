@@ -39,7 +39,7 @@ const addButtonProfile = document.querySelector(".profile__add-button");
 const popupEditProfile = document.querySelector(".popup_type_edit-profile");//?
 
 const popupAddCard = document.querySelector(".popup_type_add-card");
-const cardTemplate = document.querySelector("#card-template").content.querySelector(".element");
+const cardTemplate = document.querySelector("#card-template").content.querySelector(".places__item");
 
 //form data
 const popupInputName = popup.querySelector(".popup__input_type_name");
@@ -58,10 +58,10 @@ function openPopup() {
   popup.classList.add("popup__opened");
 }
 
-/*
+
 function closePopup() {
   popup.classList.remove("popup__opened");
-}*/
+}
 
 function handleSaveButtonSubmit(e){
   e.preventDefault();
@@ -72,8 +72,8 @@ function handleSaveButtonSubmit(e){
 
 function createCardElement(cardData){ //{name,link}
   const card = cardTemplate.cloneNode(true);
-  card.querySelector(".element__title").textContent = cardData.name;
-  card.querySelector(".element__image").style.backgroundImage = `url(${cardData.link})`;
+  card.querySelector(".card__title").textContent = cardData.name;
+  card.querySelector(".card__image").style.backgroundImage = `url(${cardData.link})`;
 
   return card;
 }
