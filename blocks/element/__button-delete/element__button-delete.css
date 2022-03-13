@@ -1,24 +1,19 @@
 .element__button-delete {
-    background-image: url(../../../images/delete.svg);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border: 0px;
-    width: 18px;
-    height: 19px;
-    position: absolute;
-    right: 16px;
-    top: 18px;
-    transition: opacity linear 0.45s;
-    /*flex-direction: row;
-    justify-self: self-end;*/
-    /*margin-top: 18px;
-    margin-left: 249px;*/
-  }
-  
-  .element__button-delete:hover {
-    opacity: 0.5;
-    cursor: pointer;
-  }
-  
+  background-image: url(../../../images/delete.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: 0px;
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  /*right: 15px;
+    top: 18px;*/
+  transition: opacity linear 0.45s;
+}
+
+.element__button-delete:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
