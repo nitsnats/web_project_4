@@ -34,8 +34,8 @@
         </section>
 
         <section class="elements">
-          <ul class="element">
-            <!--<button class="element__button-delete" type="button"></button>
+          <!--<article class="element">
+            <button class="element__button-delete" type="button"></button>
             <img
               src="./images/yosemite_valley.jpg"
               alt="Yosemite Valley image"
@@ -95,8 +95,8 @@
             <div class="element__wrap">
               <h2 class="element__title">Lago di Braies</h2>
               <button class="element__button-like" type="button"></button>
-            </div>-->
-          </ul>
+            </div>
+          </article>-->
         </section>
       </main>
 
@@ -139,7 +139,7 @@
             />
             <input
               class="popup__input popup__input_type_card-link"
-              type="text"
+              type="url"
               name="Card-link"
               placeholder="Card link"
             />
@@ -152,14 +152,13 @@
 
     <script src="./scripts/index.js" defer></script>
     <template id="card-template">
-      <li class="places__item card">
-        <div class="card__image" style=""></div>
-        <button type="button" class="card__delete-button"></button>
-        <div class="card__description">
-          <h2 class="card__title"></h2>
-          <button type="button" class="card__like-button"></button>
+      <article class="element card">
+        <img class="element__image"/>
+        <div class="element__wrap">
+          <h2 class="element__title"></h2>
+          <button class="element__button-like" type="button"></button>
         </div>
-      </li>
+      </article>
     </template>
   </body>
 </html>
