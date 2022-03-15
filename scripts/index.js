@@ -95,12 +95,6 @@ function createCardElement(cardData) {  //{name,link}
   card.querySelector(".element__title").textContent = cardData.name;
   card.querySelector(".element__image").src = cardData.link;
 
-  //card.querySelector(".element__image").addEventListener("click", (openImagePreview) => {
-  //  imageDisplayed.src = cardData.link;
-  //  imageDisplayed.textContent = cardData.name;
-  //  openPopup(imagePreview);
-  //});
-
   cardImage.addEventListener('click', () => openImagePreview(cardData));
 
   card.querySelector(".element__button-like").addEventListener("click", (evt) => {
