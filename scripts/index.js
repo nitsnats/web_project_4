@@ -49,13 +49,9 @@ const saveButtonPopup = popup.querySelector(".popup__save");
 
 //inputs
 const profileTitle = document.querySelector(".profile__title_type_title");
-const profileDescription = document.querySelector(
-  ".profile__description_type_description"
-);
+const profileDescription = document.querySelector(".profile__description_type_description");
 const popupInputName = popup.querySelector(".popup__input_type_name");
-const popupInputDescription = popup.querySelector(
-  ".popup__input_type_description"
-);
+const popupInputDescription = popup.querySelector(".popup__input_type_description");
 
 function handleEditButtonClick(popupWindow) {
   popupInputName.value = profileTitle.textContent;
@@ -89,12 +85,12 @@ function handleSaveButtonSubmit(e) {
 function createCardElement(cardData) {  //{name,link}
   const card = cardTemplate.cloneNode(true);
 
-const cardImage = card.querySelector(".element__image");
-const cardTitle = card.querySelector(".element__title");
+  const cardImage = card.querySelector(".element__image");
+  const cardTitle = card.querySelector(".element__title");
 
-cardImage.src = card.link;
-cardImage.alt = card.name;
-cardTitle.textContent = card.name;
+  cardImage.src = card.link;
+  cardImage.alt = card.name;
+  cardTitle.textContent = card.name;
 
   card.querySelector(".element__title").textContent = cardData.name;
   card.querySelector(".element__image").src = cardData.link;
@@ -105,7 +101,7 @@ cardTitle.textContent = card.name;
   //  openPopup(imagePreview);
   //});
 
-  cardImage.addEventListener('click', () => openImagePreview(card));
+  cardImage.addEventListener('click', () => openImagePreview(cardData));
 
   card.querySelector(".element__button-like").addEventListener("click", (evt) => {
       const likeButton = evt.target;
@@ -118,13 +114,13 @@ cardTitle.textContent = card.name;
   return card;
 }
 
-const openImagePreview = card => {
+const openImagePreview = cardData => {
   openPopup(previewImage);
   const popupImage = previewImage.querySelector(".popup__image");
   const popupTitle = previewImage.querySelector(".popup__subtitle");
-  popupImage.src = card.link;
-  popupImage.alt = card.name;
-  popupTitle.textContent = card.name;
+  popupImage.src = cardData.link;
+  popupImage.alt = cardData.name;
+  popupTitle.textContent = cardData.name;
 
 };
 
