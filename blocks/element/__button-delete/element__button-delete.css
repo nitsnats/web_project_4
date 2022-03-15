@@ -8,10 +8,8 @@
   width: 18px;
   height: 19px;
   position: absolute;
-  /*right: 15px;
-    top: 18px;*/
-    right: 685px;
-    top: 360px;
+  right: 15px;
+  top: 18px;
   transition: opacity linear 0.45s;
 }
 
