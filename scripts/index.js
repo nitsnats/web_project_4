@@ -24,11 +24,11 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
+//const imageDisplayed = document.querySelector(".popup_type-preview");
+const previewImage = document.querySelector(".popup_type-preview");
 
 const elementList = document.querySelector(".elements");
-const cardTemplate = document
-  .querySelector("#card-template")
-  .content.querySelector(".element");
+const cardTemplate = document.querySelector("#card-template").content.querySelector(".element");
 
 const popup = document.querySelector(".popup");
 const form = document.querySelector(".popup__form");
@@ -86,26 +86,47 @@ function handleSaveButtonSubmit(e) {
   closePopup();
 }
 
-function createCardElement(cardData) {
-  //{name,link}
+function createCardElement(cardData) {  //{name,link}
   const card = cardTemplate.cloneNode(true);
+
+const cardImage = card.querySelector(".element__image");
+const cardTitle = card.querySelector(".element__title");
+
+cardImage.src = card.link;
+cardImage.alt = card.name;
+cardTitle.textContent = card.name;
+
   card.querySelector(".element__title").textContent = cardData.name;
   card.querySelector(".element__image").src = cardData.link;
 
-  card
-    .querySelector(".element__button-like")
-    .addEventListener("click", (evt) => {
+  //card.querySelector(".element__image").addEventListener("click", (openImagePreview) => {
+  //  imageDisplayed.src = cardData.link;
+  //  imageDisplayed.textContent = cardData.name;
+  //  openPopup(imagePreview);
+  //});
+
+  cardImage.addEventListener('click', () => openImagePreview(card));
+
+  card.querySelector(".element__button-like").addEventListener("click", (evt) => {
       const likeButton = evt.target;
       likeButton.classList.toggle("element__button-like_active");
     });
 
-  card
-    .querySelector(".element__button-delete")
-    .addEventListener("click", () => {
+  card.querySelector(".element__button-delete").addEventListener("click", () => {
       card.remove();
     });
   return card;
 }
+
+const openImagePreview = card => {
+  openPopup(previewImage);
+  const popupImage = previewImage.querySelector(".popup__image");
+  const popupTitle = previewImage.querySelector(".popup__subtitle");
+  popupImage.src = card.link;
+  popupImage.alt = card.name;
+  popupTitle.textContent = card.name;
+
+};
 
 //closeButtonPopup.addEventListener("click", ".popup__close");
 
