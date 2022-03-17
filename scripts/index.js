@@ -25,7 +25,6 @@ const initialCards = [
   },
 ];
 
-
 const previewImage = document.querySelector(".popup_type-preview");
 
 const elementList = document.querySelector(".elements");
@@ -144,7 +143,7 @@ const cardData = {
     name: popupInputName.value,
     link: popupInputDescription.value,
 };
-
+/*
 renderCard(createCardElement(cardData), elementList);
 evt.preventDefault();
 closePopup(popupAddCard);
@@ -155,8 +154,7 @@ const inputList = [...document.querySelectorAll(".popup__input")];
 const inactiveButtonClass = ".popup__save_disabled";
 const newCardSubmitButton = document.querySelector("form[name='profile__add-button'] .popup__save");
 
-
 addButtonProfile.addEventListener("click", () => {
   openPopup(popupAddCard);
   toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
-});
+});*/
