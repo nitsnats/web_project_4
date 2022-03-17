@@ -53,6 +53,9 @@ const profileDescription = document.querySelector(".profile__description_type_de
 const popupInputName = popup.querySelector(".popup__input_type_name");
 const popupInputDescription = popup.querySelector(".popup__input_type_description");
 
+const inputTitle = popup.querySelector(".popup__input_type_card-name");
+const inputLink = popup.querySelector(".popup__input_type_card-link");
+
 function handleEditButtonClick(popupWindow) {
   popupInputName.value = profileTitle.textContent;
   popupInputDescription.value = profileDescription.textContent;
@@ -108,15 +111,7 @@ function createCardElement(cardData) {  //{name,link}
   return card;
 }
 
-const openImagePreview = cardData => {
-  openPopup(previewImage);
-  const popupImage = previewImage.querySelector(".popup__image");
-  const popupTitle = previewImage.querySelector(".popup__subtitle");
-  popupImage.src = cardData.link;
-  popupImage.alt = cardData.name;
-  popupTitle.textContent = cardData.name;
 
-};
 
 //closeButtonPopup.addEventListener("click", ".popup__close");
 
@@ -143,18 +138,35 @@ const cardData = {
     name: popupInputName.value,
     link: popupInputDescription.value,
 };
-/*
 renderCard(createCardElement(cardData), elementList);
 evt.preventDefault();
 closePopup(popupAddCard);
 form.reset();
 });
 
-const inputList = [...document.querySelectorAll(".popup__input")];
-const inactiveButtonClass = ".popup__save_disabled";
-const newCardSubmitButton = document.querySelector("form[name='profile__add-button'] .popup__save");
 
-addButtonProfile.addEventListener("click", () => {
-  openPopup(popupAddCard);
-  toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
-});*/
+const openImagePreview = cardData => {
+openPopup(previewImage);
+const popupImage = previewImage.querySelector(".popup__image");
+const popupTitle = previewImage.querySelector(".popup__subtitle");
+popupImage.src = cardData.link;
+popupImage.alt = cardData.name;
+popupTitle.textContent = cardData.name;
+
+};
+
+const addNewCard = document.querySelector("popup__save.popup__save_disabled");
+addNewCard.addEventListener("click", (evt) => {
+  const card = {
+    name: inputTitle.value,
+    link: inputLink.value,
+};
+renderCard(createCardElement(card), elementList);
+evt.preventDefault();
+closePopup(popupAddCard);
+form.reset();
+//});
+//const cardElement = createCardElement(card);
+
+//elementList.append(cardElement);
+});
