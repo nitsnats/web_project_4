@@ -24,7 +24,8 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
-//const imageDisplayed = document.querySelector(".popup_type-preview");
+
+
 const previewImage = document.querySelector(".popup_type-preview");
 
 const elementList = document.querySelector(".elements");
@@ -95,7 +96,7 @@ function createCardElement(cardData) {  //{name,link}
   card.querySelector(".element__title").textContent = cardData.name;
   card.querySelector(".element__image").src = cardData.link;
 
-  cardImage.addEventListener('click', () => openImagePreview(cardData));
+  cardImage.addEventListener("click", () => openImagePreview(cardData));
 
   card.querySelector(".element__button-like").addEventListener("click", (evt) => {
       const likeButton = evt.target;
@@ -129,6 +130,33 @@ addButtonProfile.addEventListener("click", function () {
   handleEditButtonClick(popupAddCard);
 });
 
-initialCards.forEach((initialCardData) => {
-  elementList.prepend(createCardElement(initialCardData));
+function renderCard(cardData, elementList) {
+  elementList.prepend(cardData);
+};
+
+initialCards.forEach(cardData => {
+const newCard = createCardElement(cardData);
+renderCard(newCard, elementList);
+});
+
+form.addEventListener("submit", (evt) => {
+const cardData = {
+    name: popupInputName.value,
+    link: popupInputDescription.value,
+};
+
+renderCard(createCardElement(cardData), elementList);
+evt.preventDefault();
+closePopup(popupAddCard);
+form.reset();
+});
+
+const inputList = [...document.querySelectorAll(".popup__input")];
+const inactiveButtonClass = ".popup__save_disabled";
+const newCardSubmitButton = document.querySelector("form[name='profile__add-button'] .popup__save");
+
+
+addButtonProfile.addEventListener("click", () => {
+  openPopup(popupAddCard);
+  toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
 });
