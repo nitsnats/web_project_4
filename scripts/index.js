@@ -67,10 +67,11 @@ function handleEditButtonClick(popupWindow) {
 }
 
 function handleAddButtonClick(popupWindow) {//???
-  //renderCard(createCardElement(cardData), elementList);
-  cardTitle.textContent = inputTitle.value;
-  cardImage.src = inputLink.value;
   openPopup(popupWindow);
+  //cardTitle.textContent = inputTitle.value;
+  //cardImage.src = inputLink.value;
+  
+  
 }
 
   
@@ -123,8 +124,6 @@ function createCardElement(cardData) {  //{name,link}
   return card;
 }
 
-
-
 //closeButtonPopup.addEventListener("click", ".popup__close");
 
 form.addEventListener("submit", handleSaveButtonSubmit);
@@ -143,8 +142,9 @@ const newCard = createCardElement(cardData);
 renderCard(newCard, elementList);
 });
 
-formCard.addEventListener("submit", (evt) => {
-const cardData = {
+formCard.addEventListener("submit", (card) => {
+  console.log("in");
+  const cardData = {
     name: inputTitle.value,
     link: inputLink.value,
 };
@@ -155,10 +155,12 @@ closePopup();
 formCard.reset();
 });
 
+  
 addButtonProfile.addEventListener("click", function () {
-  renderCard();
+  handleAddButtonClick(popupAddCard);
+  
+  console.log("OK");
 });
-
 
 const openImagePreview = cardData => {
 openPopup(previewImage);
