@@ -114,13 +114,13 @@
               class="popup__input popup__input_type_name"
               type="text"
               name="Name"
-              placeholder="Name"
+              placeholder="Name" required
             />
             <input
               class="popup__input popup__input_type_description"
               type="text"
               name="description"
-              placeholder="About me"
+              placeholder="About me" required
             />
             <button type="submit" class="popup__save" name="Save">Save</button>
           </form>
@@ -136,15 +136,15 @@
               class="popup__input popup__input_type_card-title"
               type="text"
               name="Card-title"
-              placeholder="Card title"
+              placeholder="Card title" required
             />
             <input
               class="popup__input popup__input_type_card-link"
               type="url"
               name="Card-link"
-              placeholder="Card link"
+              placeholder="Card link" required
             />
-            <button type="submit" class="popup__save popup__save_disabled" name="Save">Add</button>
+            <button type="submit" class="popup__save" name="Save">Add</button>
           </form>
         </div>
       </div>
@@ -152,7 +152,7 @@
       <section class="popup popup_type-preview">
         <div class="popup__item popup__item_preview">
           <button type="button" class="popup__close popup__close_preview" name="close"></button>
-          <img class="popup__image" src=" " alt=" ">
+          <img class="popup__image" src="" alt="">
           <p class="popup__subtitle"></p>
         </div>
       </section>
@@ -165,7 +165,7 @@
     <template id="card-template">
       <article class="element card">
         <button class="element__button-delete" type="button"></button>
-        <img class="element__image" src=" " />
+        <img class="element__image" src="" />
         <div class="element__wrap">
           <h2 class="element__title"></h2>
           <button class="element__button-like" type="button"></button>

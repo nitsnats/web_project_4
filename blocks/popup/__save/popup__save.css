@@ -15,7 +15,7 @@
   opacity: 1;
 }
 
-.popup__save:hover {
+.popup__save:hover:not(.popup__save_disabled) {
   cursor: pointer;
   opacity: 0.8;
 }

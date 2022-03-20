@@ -5,7 +5,4 @@
   opacity: 0.2;
 }
 
-.popup__save_disabled:hover:not {
-  opacity: 0.2;
-  cursor: default;
-}
+
