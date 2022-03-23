@@ -25,46 +25,52 @@ const initialCards = [
   },
 ];
 
-const cardImage = document.querySelector(".element__image");
-const cardTitle = document.querySelector(".element__title");
 
-const formCard = document.querySelector(".popup__form_card");
-const popupImagePreview = document.querySelector(".popup_type-preview");
+
+const popup = document.querySelectorAll(".popup");
+const forms = document.querySelector(".popup__form");
 
 const elementList = document.querySelector(".elements");
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".element");
 
-const popup = document.querySelector(".popup");
-const forms = document.querySelector(".popup__form");
+//profile
+const profileInfo = document.querySelector(".profile__info");
+//profile model buttons
+const editButtonProfile = profileInfo.querySelector(".profile__edit-button");
+const addButtonProfile = profileInfo.querySelector(".profile__add-button");
+//profile inputs
+const profileTitle = profileInfo.querySelector(".profile__title_type_title");
+const profileDescription = profileInfo.querySelector(".profile__description_type_description");
 
-//models
+//popup edit profile
 const popupEditProfile = document.querySelector(".popup_type_edit-profile");
+const popupEditForm = popupEditProfile.querySelector(".popup__form .popup__form_profile");//forms
+//popup edit profile inputs
+const popupInputName = popupEditProfile.querySelector(".popup__input_type_name");
+const popupInputDescription = popupEditProfile.querySelector(".popup__input_type_description");
+//edit profile model buttons
+const saveProfileButton = popupEditProfile.querySelector(".popup_type_edit-profile .popup__save");
+const closeProfileButton = popupEditProfile.querySelectorAll(".popup__close .popup__close popup__close_edit-profile");
+
+//popup add card
 const popupAddCard = document.querySelector(".popup_type_add-card");
-
-//close buttons
-const closeButtonPopup = document.querySelectorAll(".popup__close");
-
-//open model buttons
-const editButtonProfile = document.querySelector(".profile__edit-button");
-const addButtonProfile = document.querySelector(".profile__add-button");
-
-//save button
-//const saveButtonPopup = popup.querySelector(".popup__save");
-
+const formCard = popupAddCard.querySelector(".popup__form_card");
+//popup edit profile inputs
+const inputCardTitle = popupAddCard.querySelector(".popup__input_type_card-title");//inputTitle
+const inputCardLink = popupAddCard.querySelector(".popup__input_type_card-link");//inputLink
+//edit profile model buttons
 const addCardButton = document.querySelector(".popup_type_add-card .popup__save");
-const saveProfileButton = document.querySelector(".popup_type_edit-profile .popup__save");
+const closeAddCardButton = popupAddCard.querySelectorAll(".popup__close popup__close_add-card");
 
-//buttons
+//image preview
+const popupImagePreview = document.querySelector(".popup_type-preview");
+//image preview buttons
+const closePreviewButton = popupAddCard.querySelectorAll(".popup__close popup__close_preview");
+
+const cardImage = document.querySelector(".element__image");
+const cardTitle = document.querySelector(".element__title");
 
 
-//inputs
-const profileTitle = document.querySelector(".profile__title_type_title");
-const profileDescription = document.querySelector(".profile__description_type_description");
-const popupInputName = popup.querySelector(".popup__input_type_name");
-const popupInputDescription = popup.querySelector(".popup__input_type_description");
-
-const inputTitle = document.querySelector(".popup__input_type_card-title");
-const inputLink = document.querySelector(".popup__input_type_card-link");
 
 function handleEditButtonClick(popupWindow) {
   popupInputName.value = profileTitle.textContent;
@@ -81,7 +87,7 @@ function openPopup(popupWindow) {
 }
 
 function closePopup() {
-  popup.classList.remove("popup__opened");
+  popup.classList.remove(popupWindow);//from "popup__opened" to popupWindow
 }
 
 const allCloseButton = document.querySelectorAll(".popup__close");
@@ -107,24 +113,32 @@ function createCardElement(cardData) {//{name,link}
   const likeButton = card.querySelector(".element__button-like");
   const deleteButton = card.querySelector(".element__button-delete");
 
-
   //cardImage.src = card.link;
   //cardImage.alt = card.name;
   //cardTitle.textContent = card.name;
 
-  card.querySelector(".element__title").textContent = cardData.name;
-  card.querySelector(".element__image").src = cardData.link;
-
+  cardTitle.textContent = cardData.name;
+  cardImage.src = cardData.link;
+  cardImage.alt = cardData.name;
+  
   cardImage.addEventListener("click", () => openImagePreview(cardData));
 
-  likeButton.addEventListener("click", (evt) => {
-      const likeActive = evt.target;
-      likeActive.classList.toggle("element__button-like_active");
-    });
+  //likeButton.addEventListener("click", (evt) => {
+  //    const likeActive = evt.target;
+  //    likeActive.classList.toggle("element__button-like_active");
+  //  });
+
+    function activateLikeButton (evt){
+      const likeButton = evt.target;
+      likeButton.classList.toggle("elements__button-like_active");
+    }
+  
+    likeButton.addEventListener('click', activateLikeButton);
 
     deleteButton.addEventListener("click", () => {
       card.remove();
     });
+    
   return card;
 }
 
@@ -132,9 +146,11 @@ function createCardElement(cardData) {//{name,link}
 
 forms.addEventListener("submit", handleSaveButtonSubmit);
 
-editButtonProfile.addEventListener("click", function () {
-  handleEditButtonClick(popupEditProfile);
-});
+//editButtonProfile.addEventListener("click", function () {
+//  handleEditButtonClick(popupEditProfile);
+//});
+editButtonProfile.addEventListener("click", handleEditButtonClick);
+
 
 function renderCard(cardData, elementList) {
   elementList.prepend(cardData);
@@ -157,9 +173,10 @@ formCard.addEventListener("submit", (evt) => {
   formCard.reset();
 });
 
-addButtonProfile.addEventListener("click", function () {
-  handleAddButtonClick(popupAddCard);
-});
+//addButtonProfile.addEventListener("click", function () {
+//  handleAddButtonClick(popupAddCard);
+//});
+addButtonProfile.addEventListener("click", handleAddButtonClick);
 
 const openImagePreview = (cardData) => {
   openPopup(popupImagePreview);
