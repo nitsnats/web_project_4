@@ -100,10 +100,11 @@ allCloseButton.forEach((btn) =>
 );
 
 function handleSaveButtonSubmit(e) {
+  console.log("hi");
   e.preventDefault();
   profileTitle.textContent = popupInputName.value;
   profileDescription.textContent = popupInputDescription.value;
-  console.log("hi");
+  
   closePopup(popupEditForm);
 }
 
@@ -131,11 +132,11 @@ function createCardElement(cardData) {//{name,link}
   //  });
 
     function activateLikeButton (evt){
-      const likeButton = evt.target;
-      likeButton.classList.toggle("elements__button-like_active");
+      const likeActive = evt.target;
+      likeActive.classList.toggle("elements__button-like_active");
     }
   
-    likeButton.addEventListener('click', activateLikeButton);
+    likeButton.addEventListener("click", activateLikeButton);
 
     deleteButton.addEventListener("click", () => {
       card.remove();
@@ -146,7 +147,7 @@ function createCardElement(cardData) {//{name,link}
 
 //closeButtonPopup.addEventListener("click", ".popup__close");
 
-forms.addEventListener("submit", handleSaveButtonSubmit);
+saveProfileButton.addEventListener("submit", handleSaveButtonSubmit);
 
 //editButtonProfile.addEventListener("click", function () {
 //  handleEditButtonClick(popupEditProfile);
