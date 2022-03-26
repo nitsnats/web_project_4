@@ -71,12 +71,21 @@ const cardImage = document.querySelector(".element__image");
 const cardTitle = document.querySelector(".element__title");
 
 
-
-function handleEditButtonClick() {
+function fillProfileForm(){
   popupInputName.value = profileTitle.textContent;
   popupInputDescription.value = profileDescription.textContent;
+}
+
+function handleEditButtonClick(){
+  fillProfileForm();
   openPopup(popupEditProfile);
 }
+
+//function handleEditButtonClick() {
+//  popupInputName.value = profileTitle.textContent;
+//  popupInputDescription.value = profileDescription.textContent;
+//  openPopup(popupEditProfile);
+//}
 
 
 function handleAddButtonClick() {
@@ -95,12 +104,14 @@ function closePopup(popupWindow) {
 const allCloseButton = document.querySelectorAll(".popup__close");
 allCloseButton.forEach((btn) =>
   btn.addEventListener("click", () => {
-    const allThePopups = document.querySelectorAll(".popup");
-    allThePopups.forEach((popup) => popup.classList.remove("popup__opened"));
+    //const allThePopups = document.querySelectorAll(".popup");
+    //allThePopups.forEach((popup) => popup.classList.remove("popup__opened"));
+    const openedPopup = document.querySelector(".popup__opened")
+    closePopup(openedPopup);
   })
 );
 
-function handleSaveButtonSubmit(e) {
+function handleProfileFormSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = popupInputName.value;
   profileDescription.textContent = popupInputDescription.value;
@@ -134,17 +145,23 @@ function createCardElement(cardData) {//{name,link}
   
     likeButton.addEventListener("click", activateLikeButton);
 
-    deleteButton.addEventListener("click", () => {
+    //deleteButton.addEventListener("click", () => {
+    //  card.remove();
+    //});
+
+    function handleDeletButton (){
       card.remove();
-    });
-    
+    }
+  
+    deleteButton.addEventListener("click", handleDeletButton);
+
   return card;
 }
 
 //closeButtonPopup.addEventListener("click", ".popup__close");
 
-popupEditProfile.addEventListener("submit", handleSaveButtonSubmit);
-//popupAddCard.addEventListener("submit", handleSaveButtonSubmit);
+popupEditProfile.addEventListener("submit", handleProfileFormSubmit);
+//popupAddCard.addEventListener("submit", handleProfileFormSubmit);
 
 //editButtonProfile.addEventListener("click", function () {
 //  handleEditButtonClick(popupEditProfile);
