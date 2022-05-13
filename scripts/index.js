@@ -25,7 +25,7 @@ const initialCards = [
   },
 ];
 
-
+//import { toggleButton } from './validation.js';
 
 const popup = document.querySelectorAll(".popup");
 const forms = document.querySelector(".popup__form");
@@ -79,6 +79,8 @@ function fillProfileForm(){
 function handleEditButtonClick(){
   fillProfileForm();
   openPopup(popupEditProfile);
+  popupInputName.value = "";
+  popupInputDescription.value = "";
 }
 
 //function handleEditButtonClick() {
@@ -95,11 +97,15 @@ function handleAddButtonClick() {
 
 function openPopup(popupWindow) {
   popupWindow.classList.add("popup__opened");
+  
 }
 
 function closePopup(popupWindow) {
   popupWindow.classList.remove("popup__opened");
+  
 }
+
+
 
 const allCloseButton = document.querySelectorAll(".popup__close");
 allCloseButton.forEach((btn) =>
@@ -203,3 +209,34 @@ const openImagePreview = (cardData) => {
   popupImage.alt = cardData.name;
   popupTitle.textContent = cardData.name;
 };
+
+
+
+function handleKeyDown(evt) {
+  const openedPopup = document.querySelector(".popup__opened")
+  if (evt.key === "Escape" && openedPopup) {
+    openedPopup.classList.remove("popup__opened");
+      
+  }
+}
+
+function addKeyDownListener() {
+  window.addEventListener("keydown", handleKeyDown);
+}
+
+function removeKeyDownListener() {
+  window.removeEventListener("keydown", handleKeyDown);
+}
+
+//Closing the popup windows by click
+const popupList = document.querySelectorAll(".popup");
+popupList.forEach((popup) => {
+  popup.addEventListener('mousedown', (evt) => {
+    if(evt.target.matches('.popup')) {
+      const openedPopup = document.querySelector(".popup__opened")
+      closePopup(openedPopup);
+      
+    }
+  });
+});
+

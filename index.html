@@ -110,19 +110,21 @@
           <button type="button" class="popup__close" name="close"></button>
           <form class="popup__form" name="naw">
             <h3 class="popup__title">Edit Profile</h3>
-            <input
+            <input id="name-input"
               class="popup__input popup__input_type_name"
               type="text"
               name="Name"
-              placeholder="Name" required
+              placeholder="Name" required minlength="2" maxlength="40"
             />
-            <input
+            <span id="name-input-error"></span>
+            <input id="description-input"
               class="popup__input popup__input_type_description"
               type="text"
               name="description"
-              placeholder="About me" required
+              placeholder="About me" required minlength="2" maxlength="200"
             />
-            <button type="submit" class="popup__save" name="Save">Save</button>
+            <span id="description-input-error"></span>
+            <button type="submit" class="popup__save popup__save_disabled" name="Save">Save</button>
           </form>
         </div>
       </div>
@@ -130,21 +132,23 @@
       <div class="popup popup_type_add-card">
         <div class="popup__item">
           <button type="button" class="popup__close" name="close"></button>
-          <form class="popup__form popup__form_card" name="naw" novalidate>
+          <form class="popup__form popup__form_card" name="naw" >
             <h3 class="popup__title">Add a card</h3>
-            <input
+            <input id="card-title-input"
               class="popup__input popup__input_type_card-title"
               type="text"
-              name="Card-title"
-              placeholder="Card title" required
+              name="card-title"
+              placeholder="Card title" required minlength="1" maxlength="30"
             />
-            <input
+            <span id="card-link-input"></span>
+            <input id="card-title-input"
               class="popup__input popup__input_type_card-link"
               type="url"
-              name="Card-link"
+              name="card-link"
               placeholder="Card link" required
             />
-            <button type="submit" class="popup__save" name="Save">Add</button>
+            <span id="card-link-input-error"></span>
+            <button type="submit" class="popup__save popup__save_disabled" name="Save">Add</button>
           </form>
         </div>
       </div>
@@ -172,6 +176,7 @@
     </template>
     
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validate.js" defer></script>
 
   </body>
 </html>
