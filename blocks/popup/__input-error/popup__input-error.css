@@ -1,4 +1,4 @@
-.popup__input-errpr_open{
+.popup__input-error{
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -8,5 +8,7 @@
   text-decoration: none;
   position: absolute;
   top: 50%;
-  display: none;
+  /*display: none;*/
+  
 }
+

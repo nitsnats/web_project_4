@@ -57,7 +57,7 @@ const popupInputDescription = popupEditProfile.querySelector(
     ".popup__input_type_description"
 );
 //edit profile model buttons
-const saveProfileButton = popupEditProfile.querySelector(".popup__save");
+const saveProfileButton = popupEditProfile.querySelector(".popup__save_type_edit-profile");
 
 //popup add card
 const popupAddCard = document.querySelector(".popup_type_add-card");
@@ -70,7 +70,7 @@ const inputCardLink = popupAddCard.querySelector(
     ".popup__input_type_card-link"
 );
 //edit add card buttons
-const addCardButton = popupAddCard.querySelector(".popup__save");
+const addCardButton = popupAddCard.querySelector(".popup__save_type_add-card");
 
 //image preview
 const popupImagePreview = document.querySelector(".popup_type-preview");
@@ -86,7 +86,12 @@ function fillProfileForm() {
 
 function handleEditButtonClick() {
     fillProfileForm();
-    openPopup(popupEditProfile);   
+    openPopup(popupEditProfile); 
+
+    const inputList = [...popupEditProfile.querySelectorAll(config.inputSelector)];
+    const buttonElement = popupEditProfile.querySelector(config .submitButtonSelector);
+
+    toggleButtonState(inputList, buttonElement, config);
 }
 
 function handleAddButtonClick() {
