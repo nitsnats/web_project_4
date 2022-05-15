@@ -36,7 +36,7 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
 
 function disableButton(buttonElement, settings) {
   buttonElement.disabled = true;
-  buttonElement.classList.add(settings.disableButtonClass);
+  buttonElement.classList.add(settings.inactiveButtonClass);
 }
 
 function enableButton(buttonElement, settings) {
@@ -46,7 +46,7 @@ function enableButton(buttonElement, settings) {
 
 const setEventListeners = (formElement, inputElements, settings) => {
   const inputList = [...formElement.querySelectorAll(settings.inputSelector)];
-  const buttonElement = formElement.querySelector(settings.inactiveButtonClass);
+  const buttonElement = formElement.querySelector(settings.submitButtonSelector);
 
   toggleButtonState(inputList, buttonElement, settings); //toggle submit
   inputElements.forEach((inputElement) => {
