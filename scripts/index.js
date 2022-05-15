@@ -166,6 +166,7 @@ initialCards.forEach((cardData) => {
     renderCard(newCard, elementList);
 });
 
+
 formCard.addEventListener("submit", (evt) => {
     const cardData = {
         name: inputCardTitle.value,
@@ -176,6 +177,7 @@ formCard.addEventListener("submit", (evt) => {
     evt.preventDefault();
     closePopup(popupAddCard);
     formCard.reset();
+    disableButton(addCardButton, config);
 });
 
 addButtonProfile.addEventListener("click", handleAddButtonClick);
