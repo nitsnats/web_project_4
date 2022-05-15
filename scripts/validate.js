@@ -41,12 +41,12 @@ function disableButton(buttonElement, settings) {
 
 function enableButton(buttonElement, settings) {
   buttonElement.disabled = false;
-  buttonElement.classList.remove(settings.disableButtonClass);
+  buttonElement.classList.remove(settings.inactiveButtonClass);
 }
 
 const setEventListeners = (formElement, inputElements, settings) => {
   const inputList = [...formElement.querySelectorAll(settings.inputSelector)];
-  const buttonElement = formElement.querySelector(settings.submitButtonSelector);
+  const buttonElement = formElement.querySelector(settings.inactiveButtonClass);
 
   toggleButtonState(inputList, buttonElement, settings); //toggle submit
   inputElements.forEach((inputElement) => {
