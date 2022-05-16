@@ -7,8 +7,6 @@
   opacity: 1;
   text-decoration: none;
   position: absolute;
-  top: 50%;
-  /*display: none;*/
-  
+  margin-top: -25px;
 }
 

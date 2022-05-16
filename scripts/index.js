@@ -205,7 +205,6 @@ function removeKeyDownListener() {
     window.removeEventListener("keydown", handleKeyDown);
 }
 
-const popupLists = document.querySelectorAll(".popup");
 popups.forEach((popup) => {
     popup.addEventListener("mousedown", (evt) => {
         if (evt.target.matches(".popup")) {

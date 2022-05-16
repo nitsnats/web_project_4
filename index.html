@@ -113,93 +113,35 @@
 
             <div class="popup popup_type_edit-profile">
                 <div class="popup__item">
-                    <button
-                        type="button"
-                        class="popup__close"
-                        name="close"
-                    ></button>
+                    <button type="button" class="popup__close" name="close"></button>
                     <form class="popup__form" name="naw">
                         <h3 class="popup__title">Edit Profile</h3>
-                        <input
-                            id="name-input"
-                            class="popup__input popup__input_type_name"
-                            type="text"
-                            name="Name"
-                            placeholder="Name"
-                            required
-                            minlength="2"
-                            maxlength="40"
-                        />
+                        <input id="name-input" class="popup__input popup__input_type_name" type="text" name="Name" placeholder="Name" required minlength="2" maxlength="40"/>
                         <span id="name-input-error" class="popup__input-error"></span>
-                        <input
-                            id="description-input"
-                            class="popup__input popup__input_type_description"
-                            type="text"
-                            name="description"
-                            placeholder="About me"
-                            required
-                            minlength="2"
-                            maxlength="200"
-                        />
+                        <input id="description-input" class="popup__input popup__input_type_description" type="text" name="description" placeholder="About me" required minlength="2" maxlength="200"/>
                         <span id="description-input-error" class="popup__input-error"></span>
-                        <button
-                            type="submit"
-                            class="popup__save popup__save_type_edit-profile"
-                            name="Save" 
-                        >
-                            Save
-                        </button>
+                        <button type="submit" class="popup__save popup__save_type_edit-profile" name="Save">Save</button>
                     </form>
                 </div>
             </div>
 
             <div class="popup popup_type_add-card">
                 <div class="popup__item">
-                    <button
-                        type="button"
-                        class="popup__close"
-                        name="close"
-                    ></button>
+                    <button type="button" class="popup__close" name="close"></button>
                     <form class="popup__form popup__form_card" name="naw">
                         <h3 class="popup__title">Add a card</h3>
-                        <input
-                            id="card-title-input"
-                            class="popup__input popup__input_type_card-title"
-                            type="text"
-                            name="card-title"
-                            placeholder="Card title"
-                            required
-                            minlength="1"
-                            maxlength="30"
-                        />
+                        <input id="card-title-input" class="popup__input popup__input_type_card-title" type="text" name="card-title" placeholder="Card title" required minlength="1" maxlength="30"/>
                         <span id="card-title-input-error" class="popup__input-error"></span>
-                        <input
-                            id="card-link-input"
-                            class="popup__input popup__input_type_card-link"
-                            type="url"
-                            name="card-link"
-                            placeholder="Card link"
-                            required
-                        />
+                        <input id="card-link-input" class="popup__input popup__input_type_card-link" type="url" name="card-link" placeholder="Card link" required/>
                         <span id="card-link-input-error" class="popup__input-error"></span>
-                        <button
-                            type="submit"
-                            class="popup__save popup__save_type_add-card"
-                            name="Save" 
-                        >
-                            Add
-                        </button>
+                        <button type="submit" class="popup__save popup__save_type_add-card" name="Save">Add</button>
                     </form>
                 </div>
             </div>
 
             <section class="popup popup_type-preview">
                 <div class="popup__item popup__item_preview">
-                    <button
-                        type="button"
-                        class="popup__close popup__close_preview"
-                        name="close"
-                    ></button>
+                    <button type="button" class="popup__close popup__close_preview" name="close"></button>
                     <img class="popup__image" src="#" alt="Thumbnail" />
                     <p class="popup__subtitle"></p>
                 </div>
