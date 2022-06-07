@@ -1,3 +1,28 @@
+import { Card} from "./Card.js"
+import FormValidator from "./FormValidator.js";
+import { openPopup, closePopup, } from "./utils.js"
+
+
+const setting = {
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__save",
+    inactiveButtonClass: "popup__save_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible",
+}
+
+//const popupEditProfile = document.querySelector(".popup_type_edit-profile");
+//const popupAddCard = document.querySelector(".popup_type_add-card");
+
+const editFormValidator = new FormValidator(setting, popupEditProfile)
+const addCardFormValidator = new FormValidator(setting, popupAddCard)
+
+editFormValidator.enableValidation();
+addCardFormValidator.enableValidation();
+
+//editFormValidator.resetValidation()
+//addCardFormValidator.resetValidation()
+
 const initialCards = [
     {
         name: "Yosemite Valley",
@@ -98,15 +123,15 @@ function handleAddButtonClick() {
     openPopup(popupAddCard);
 }
 
-function openPopup(popupWindow) {
-    popupWindow.classList.add("popup__opened");
-    addKeyDownListener();
-}
+// function openPopup(popupWindow) {
+//     popupWindow.classList.add("popup__opened");
+//     addKeyDownListener();
+// }
 
-function closePopup(popupWindow) {
-    popupWindow.classList.remove("popup__opened");
-    removeKeyDownListener();
-}
+// function closePopup(popupWindow) {
+//     popupWindow.classList.remove("popup__opened");
+//     removeKeyDownListener();
+// }
 
 const allCloseButtons = document.querySelectorAll(".popup__close");
 
@@ -122,48 +147,56 @@ function handleProfileFormSubmit(e) {
     closePopup(popupEditProfile);
 }
 
-function createCardElement(cardData) {
-    //{name,link}
-    const card = cardTemplate.cloneNode(true);
+// function createCardElement(cardData) {
+//     //{name,link}
+//     const card = cardTemplate.cloneNode(true);
 
-    const cardImage = card.querySelector(".element__image");
-    const cardTitle = card.querySelector(".element__title");
-    const likeButton = card.querySelector(".element__button-like");
-    const deleteButton = card.querySelector(".element__button-delete");
+//     const cardImage = card.querySelector(".element__image");
+//     const cardTitle = card.querySelector(".element__title");
+//     const likeButton = card.querySelector(".element__button-like");
+//     const deleteButton = card.querySelector(".element__button-delete");
 
-    cardTitle.textContent = cardData.name;
-    cardImage.src = cardData.link;
-    cardImage.alt = cardData.name;
+//     cardTitle.textContent = cardData.name;
+//     cardImage.src = cardData.link;
+//     cardImage.alt = cardData.name;
 
-    cardImage.addEventListener("click", () => openImagePreview(cardData));
+//     cardImage.addEventListener("click", () => openImagePreview(cardData));
 
-    function activateLikeButton(evt) {
-        const likeActive = evt.target;
-        likeActive.classList.toggle("element__button-like_active");
-    }
+//     function activateLikeButton(evt) {
+//         const likeActive = evt.target;
+//         likeActive.classList.toggle("element__button-like_active");
+//     }
 
-    likeButton.addEventListener("click", activateLikeButton);
+//     likeButton.addEventListener("click", activateLikeButton);
 
-    function handleDeletButton() {
-        card.remove();
-    }
+//     function handleDeletButton() {
+//         card.remove();
+//     }
 
-    deleteButton.addEventListener("click", handleDeletButton);
+//     deleteButton.addEventListener("click", handleDeletButton);
 
-    return card;
-}
+//     return card;
+// }
+
+//const cardElement = card.getCardElement()
+//const card = new Card({text: "card1", link: "https://..."}, "#card-template", () => {})
+
+//getCardElement({name: "", link: ""})
 
 popupEditProfile.addEventListener("submit", handleProfileFormSubmit);
 
 editButtonProfile.addEventListener("click", handleEditButtonClick);
 
+const templateCardSelector = "#card-template"
+
 function renderCard(cardData, elementList) {
-    elementList.prepend(cardData);
+    const card = new Card(cardData, templateCardSelector)    
+    const CardElement = card.getCardElement   
+    elementList.prepend(CardElement);
 }
 
 initialCards.forEach((cardData) => {
-    const newCard = createCardElement(cardData);
-    renderCard(newCard, elementList);
+    renderCard(cardData, elementList);
 });
 
 
