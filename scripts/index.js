@@ -3,27 +3,6 @@ import FormValidator from "./FormValidator.js";
 import { openPopup, closePopup, } from "./utils.js"
 
 
-const settings = {
-    formSelector: ".popup__form",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__save",
-    inactiveButtonClass: "popup__save_disabled",
-    inputErrorClass: "popup__input_type_error",
-    errorClass: "popup__error_visible",
-}
-
-const popupEditProfile = document.querySelector(".popup_type_edit-profile");
-const popupAddCard = document.querySelector(".popup_type_add-card");
-
-const editFormValidator = new FormValidator(settings, popupEditProfile)
-const addCardFormValidator = new FormValidator(settings, popupAddCard)
-
-editFormValidator.enableValidation();
-addCardFormValidator.enableValidation();
-
-//editFormValidator.resetValidation()
-//addCardFormValidator.resetValidation()
-
 const initialCards = [
     {
         name: "Yosemite Valley",
@@ -51,7 +30,6 @@ const initialCards = [
     },
 ];
 
-
 const popups = document.querySelectorAll(".popup");
 const forms = document.querySelector(".popup__form");
 
@@ -72,7 +50,7 @@ const profileDescription = profileInfo.querySelector(
 );
 
 //popup edit profile
-//const popupEditProfile = document.querySelector(".popup_type_edit-profile");
+const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const popupEditForm = popupEditProfile.querySelector(".popup__form"); //forms
 //popup edit profile inputs
 const popupInputName = popupEditProfile.querySelector(
@@ -85,7 +63,7 @@ const popupInputDescription = popupEditProfile.querySelector(
 const saveProfileButton = popupEditProfile.querySelector(".popup__save_type_edit-profile");
 
 //popup add card
-//const popupAddCard = document.querySelector(".popup_type_add-card");
+const popupAddCard = document.querySelector(".popup_type_add-card");
 const formCard = popupAddCard.querySelector(".popup__form_card");
 //popup add card inputs
 const inputCardTitle = popupAddCard.querySelector(
@@ -103,6 +81,27 @@ const cardImage = document.querySelector(".element__image");
 const cardTitle = document.querySelector(".element__title");
 const popupImage = popupImagePreview.querySelector(".popup__image");
 const popupTitle = popupImagePreview.querySelector(".popup__subtitle");
+
+const settings = {
+    formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__save",
+    inactiveButtonClass: "popup__save_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible",
+}
+
+// const popupEditProfile = document.querySelector(".popup_type_edit-profile");
+// const popupAddCard = document.querySelector(".popup_type_add-card");
+
+const editFormValidator = new FormValidator(settings, popupEditProfile)
+const addCardFormValidator = new FormValidator(settings, popupAddCard)
+
+editFormValidator.enableValidation();
+addCardFormValidator.enableValidation();
+
+//editFormValidator.resetValidation()
+//addCardFormValidator.resetValidation()
 
 function fillProfileForm() {
     popupInputName.value = profileTitle.textContent;
