@@ -5,7 +5,7 @@ export class Card {
         this._data = data
         this._templateCardSelector = templateCardSelector
 
-        this._cardTemlate = document.querySelector(templateCardSelector)
+        this._cardTemplate = document.querySelector(templateCardSelector)
             .content.querySelector(".element");
     }
 
@@ -37,8 +37,8 @@ export class Card {
         this._cardTitle = this._card.querySelector(".element__title");
 
         this._cardTitle.textContent = this._data.text;
-        cardImage.src = this._data.link;
-        cardImage.alt = this._data.text;
+        this._cardImage.src = this._data.link;
+        this._cardImage.alt = this._data.text;
       
         this._addEventListeners()
         return this._card;

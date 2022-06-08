@@ -112,10 +112,10 @@ function handleEditButtonClick() {
     fillProfileForm();
     openPopup(popupEditProfile); 
 
-    const inputList = [...popupEditProfile.querySelectorAll(config.inputSelector)];
-    const buttonElement = popupEditProfile.querySelector(config .submitButtonSelector);
+    const inputList = [...popupEditProfile.querySelectorAll(settings.inputSelector)];
+    const buttonElement = popupEditProfile.querySelector(settings.submitButtonSelector);
 
-    toggleButtonState(inputList, buttonElement, config);
+    toggleButtonState(inputList, buttonElement, settings);
 }
 
 function handleAddButtonClick() {
@@ -190,8 +190,8 @@ const templateCardSelector = "#card-template"
 
 function renderCard(cardData, elementList) {
     const card = new Card(cardData, templateCardSelector)    
-    const CardElement = card.getCardElement   
-    elementList.prepend(CardElement);
+    //const CardElement = card.getCardElement(cardData)   
+    elementList.prepend(card.getCardElement());
 }
 
 initialCards.forEach((cardData) => {
@@ -205,11 +205,11 @@ formCard.addEventListener("submit", (evt) => {
         link: inputCardLink.value,
     };
 
-    renderCard(createCardElement(cardData), elementList);
+    renderCard(cardData, elementList);
     evt.preventDefault();
     closePopup(popupAddCard);
     formCard.reset();
-    disableButton(addCardButton, config);
+    disableButton(addCardButton, settings);
 });
 
 addButtonProfile.addEventListener("click", handleAddButtonClick);

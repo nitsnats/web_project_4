@@ -8,11 +8,11 @@ export function openPopup(popupWindow) {
     addKeyDownListener();
 }
 
-function addKeyDownListener() {
+export function addKeyDownListener() {
     window.addEventListener("keydown", handleKeyDown);
 }
 
-function handleKeyDown(evt) {
+export function handleKeyDown(evt) {
     if (evt.key === "Escape") {
       const openedPopup = document.querySelector(".popup__opened");
       openedPopup && closePopup(openedPopup)
@@ -24,7 +24,7 @@ export function closePopup(popupWindow) {
     removeKeyDownListener();
 }
 
-function removeKeyDownListener() {
+export function removeKeyDownListener() {
     window.removeEventListener("keydown", handleKeyDown);
 }
 
