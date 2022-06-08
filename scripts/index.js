@@ -3,7 +3,8 @@ import FormValidator from "./FormValidator.js";
 import { openPopup, closePopup, } from "./utils.js"
 
 
-const setting = {
+const settings = {
+    formSelector: ".popup__form",
     inputSelector: ".popup__input",
     submitButtonSelector: ".popup__save",
     inactiveButtonClass: "popup__save_disabled",
@@ -11,11 +12,11 @@ const setting = {
     errorClass: "popup__error_visible",
 }
 
-//const popupEditProfile = document.querySelector(".popup_type_edit-profile");
-//const popupAddCard = document.querySelector(".popup_type_add-card");
+const popupEditProfile = document.querySelector(".popup_type_edit-profile");
+const popupAddCard = document.querySelector(".popup_type_add-card");
 
-const editFormValidator = new FormValidator(setting, popupEditProfile)
-const addCardFormValidator = new FormValidator(setting, popupAddCard)
+const editFormValidator = new FormValidator(settings, popupEditProfile)
+const addCardFormValidator = new FormValidator(settings, popupAddCard)
 
 editFormValidator.enableValidation();
 addCardFormValidator.enableValidation();
@@ -50,7 +51,6 @@ const initialCards = [
     },
 ];
 
-//import { toggleButton } from './validation.js';
 
 const popups = document.querySelectorAll(".popup");
 const forms = document.querySelector(".popup__form");
@@ -72,7 +72,7 @@ const profileDescription = profileInfo.querySelector(
 );
 
 //popup edit profile
-const popupEditProfile = document.querySelector(".popup_type_edit-profile");
+//const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const popupEditForm = popupEditProfile.querySelector(".popup__form"); //forms
 //popup edit profile inputs
 const popupInputName = popupEditProfile.querySelector(
@@ -85,7 +85,7 @@ const popupInputDescription = popupEditProfile.querySelector(
 const saveProfileButton = popupEditProfile.querySelector(".popup__save_type_edit-profile");
 
 //popup add card
-const popupAddCard = document.querySelector(".popup_type_add-card");
+//const popupAddCard = document.querySelector(".popup_type_add-card");
 const formCard = popupAddCard.querySelector(".popup__form_card");
 //popup add card inputs
 const inputCardTitle = popupAddCard.querySelector(
