@@ -76,11 +76,11 @@ const inputCardLink = popupAddCard.querySelector(
 const addCardButton = popupAddCard.querySelector(".popup__save_type_add-card");
 
 //image preview
-const popupImagePreview = document.querySelector(".popup_type-preview");
+export const popupImagePreview = document.querySelector(".popup_type-preview");
 const cardImage = document.querySelector(".element__image");
 const cardTitle = document.querySelector(".element__title");
-const popupImage = popupImagePreview.querySelector(".popup__image");
-const popupTitle = popupImagePreview.querySelector(".popup__subtitle");
+export const popupImage = popupImagePreview.querySelector(".popup__image");
+export const popupTitle = popupImagePreview.querySelector(".popup__subtitle");
 
 const settings = {
     formSelector: ".popup__form",
@@ -112,22 +112,12 @@ function handleEditButtonClick() {
     const inputList = [...popupEditProfile.querySelectorAll(settings.inputSelector)];
     const buttonElement = popupEditProfile.querySelector(settings.submitButtonSelector);
 
-    toggleButtonState(inputList, buttonElement, settings);
+    //toggleButtonState(inputList, buttonElement, settings);
 }
 
 function handleAddButtonClick() {
     openPopup(popupAddCard);
 }
-
-// function openPopup(popupWindow) {
-//     popupWindow.classList.add("popup__opened");
-//     addKeyDownListener();
-// }
-
-// function closePopup(popupWindow) {
-//     popupWindow.classList.remove("popup__opened");
-//     removeKeyDownListener();
-// }
 
 const allCloseButtons = document.querySelectorAll(".popup__close");
 
@@ -170,33 +160,11 @@ formCard.addEventListener("submit", (evt) => {
     evt.preventDefault();
     closePopup(popupAddCard);
     formCard.reset();
-    disableButton(addCardButton, settings);
+    //disableButton(addCardButton, settings);
+    addCardFormValidator.toggleButtonState()
 });
 
 addButtonProfile.addEventListener("click", handleAddButtonClick);
-
-const openImagePreview = (cardData) => {
-    openPopup(popupImagePreview);
-    
-    popupImage.src = cardData.link;
-    popupImage.alt = cardData.name;
-    popupTitle.textContent = cardData.name;
-};
-
-function handleKeyDown(evt) {
-  if (evt.key === "Escape") {
-    const openedPopup = document.querySelector(".popup__opened");
-    openedPopup && closePopup(openedPopup)
-  }
-}
-
-function addKeyDownListener() {
-    window.addEventListener("keydown", handleKeyDown);
-}
-
-function removeKeyDownListener() {
-    window.removeEventListener("keydown", handleKeyDown);
-}
 
 popups.forEach((popup) => {
     popup.addEventListener("mousedown", (evt) => {

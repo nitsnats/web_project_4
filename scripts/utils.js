@@ -1,6 +1,6 @@
-export const popupImagePreview = document.querySelector(".popup_type-preview");
-export const popupImage = popupImagePreview.querySelector(".popup__image");
-export const popupTitle = popupImagePreview.querySelector(".popup__subtitle");
+// export const popupImagePreview = document.querySelector(".popup_type-preview");
+// export const popupImage = popupImagePreview.querySelector(".popup__image");
+// export const popupTitle = popupImagePreview.querySelector(".popup__subtitle");
 
 
 export function openPopup(popupWindow) {
@@ -8,11 +8,11 @@ export function openPopup(popupWindow) {
     addKeyDownListener();
 }
 
-export function addKeyDownListener() {
+function addKeyDownListener() {
     window.addEventListener("keydown", handleKeyDown);
 }
 
-export function handleKeyDown(evt) {
+function handleKeyDown(evt) {
     if (evt.key === "Escape") {
       const openedPopup = document.querySelector(".popup__opened");
       openedPopup && closePopup(openedPopup)
@@ -24,7 +24,7 @@ export function closePopup(popupWindow) {
     removeKeyDownListener();
 }
 
-export function removeKeyDownListener() {
+function removeKeyDownListener() {
     window.removeEventListener("keydown", handleKeyDown);
 }
 

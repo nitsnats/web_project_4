@@ -48,7 +48,7 @@ export class FormValidator {
         this._buttonElement.classList.remove(inactiveButtonClass);
       }
 
-    _toggleButtonState = () => {
+    toggleButtonState = () => {
         
         if (this._hasInvalidInput()) {
                this._enableButton();
@@ -62,11 +62,11 @@ export class FormValidator {
         //const buttonElement = this._formElement.querySelector(submitButtonSelector);
         
       
-        this._toggleButtonState(); //toggle submit
+        this.toggleButtonState(); //toggle submit
         this._inputList.forEach((inputElement) => {
           inputElement.addEventListener("input", () => {
             this._checkInputValidity(inputElement); //check validity
-            this._toggleButtonState(); //toggle submit
+            this.toggleButtonState(); //toggle submit
           });
         });
     };

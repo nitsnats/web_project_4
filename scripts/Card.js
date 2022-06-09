@@ -1,4 +1,5 @@
-import { openPopup, popupImagePreview, popupImage, popupTitle} from "./utils.js"
+import { popupImagePreview, popupImage, popupTitle} from "./index.js"
+import { openPopup } from "./utils.js"
 
 export class Card {
     constructor(data, templateCardSelector) { //{text,link}
@@ -12,7 +13,10 @@ export class Card {
 
     _activateLikeButton = evt => evt.target.classList.toggle("element__button-like_active");
 
-    _handleDeletButton = () => this._card.remove();
+    _handleDeletButton = () => {
+        this._card.remove();
+        this._card = null;
+    }
     
     _openImagePreview = () => {
         popupImage.src = this._link;
@@ -33,9 +37,9 @@ export class Card {
         this._likeButton = this._card.querySelector(".element__button-like");
         this._deleteButton = this._card.querySelector(".element__button-delete");
         this._cardImage = this._card.querySelector(".element__image");
-        this._cardTitle = this._card.querySelector(".element__title");
+        const cardTitle = this._card.querySelector(".element__title");
 
-        this._cardTitle.textContent = this._text;
+        cardTitle.textContent = this._text;
         this._cardImage.src = this._link;
         this._cardImage.alt = this._text;
       
