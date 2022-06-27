@@ -1,5 +1,5 @@
 .element__button-like {
-  background-image: url(../../../images/like.svg);
+  background-image: url(../../../src/images/like.svg);
   background-repeat: no-repeat;
   width: 21px;
   height: 19px;
@@ -15,7 +15,7 @@
 }
 
 .element__button-like_active {
-  background-image: url(../../../images/blackheart.svg);
+  background-image: url(../../../src/images/blackheart.svg);
   background-repeat: no-repeat;
   width: 21px;
   height: 19px;
