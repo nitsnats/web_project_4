@@ -1,13 +1,12 @@
-import "./styles/index.css";
-import "./fonts/font.css";
-import { initialCards, popups, forms, elementList, cardTemplate, editButtonProfile, addButtonProfile, popupEditProfile, popupInputName, popupInputDescription, popupAddCard, popupImagePreview, popupImage, popupTitle, settings} from "../src/scripts/constants.js"
-import { Card} from "../src/scripts/Card.js"
-import FormValidator from "../src/scripts/FormValidator.js";
-import { openPopup, closePopup, } from "../src/scripts/utils.js"
-import { PopupWithForm } from "../src/scripts/PopupWithForm.js"
-import { PopupWithImage } from "../src/scripts/PopupWithImage.js"
-import { Section } from "../src/scripts/Section.js"
-import { UserInfo } from "../src/scripts/UserInfo.js"
+import "./../pages/index.css";
+import "./../fonts/font.css";
+import { initialCards, elementList, editButtonProfile, addButtonProfile, popupEditProfile, popupInputName, popupInputDescription, popupAddCard, settings} from "../utils/constants.js"
+import { Card} from "../components/Card.js"
+import FormValidator from "../components/FormValidator.js";
+import { PopupWithForm } from "../components/PopupWithForm.js"
+import { PopupWithImage } from "../components/PopupWithImage.js"
+import { Section } from "../components/Section.js"
+import { UserInfo } from "../components/UserInfo.js"
 
 
 const editFormValidator = new FormValidator(settings, popupEditProfile)
@@ -26,12 +25,14 @@ const handleAddCardSubmit = (data) => {
     );
         
     addCardPopup.close()
+    addCardFormValidator.disableButton()
 }
 
 const handleProfileFormSubmit = (data) => {
     userInfo.setUserInfo(data.Name, data.description)
     
     editProfilePopup.close()
+    addCardFormValidator.disableButton()
 }
 
 const addCardPopup = new PopupWithForm(".popup_type_add-card", handleAddCardSubmit)
@@ -74,15 +75,17 @@ function handleEditButtonClick() {
 }
 
 function handleAddButtonClick() {
+    addCardFormValidator.disableButton()
     addCardPopup.open()
+    
 }
 
-const allCloseButtons = document.querySelectorAll(".popup__close");
+// const allCloseButtons = document.querySelectorAll(".popup__close");
 
-allCloseButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-});
+// allCloseButtons.forEach((button) => {
+//   const popup = button.closest('.popup');
+//   button.addEventListener('click', () => closePopup(popup));
+// });
 
 editButtonProfile.addEventListener("click", handleEditButtonClick);
 

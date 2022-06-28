@@ -11,8 +11,10 @@ export class PopupWithImage extends Popup {
 
         const caption = this._popup.querySelector(".popup__subtitle")
         const image = this._popup.querySelector(".popup__image")
-
+        
         caption.textContent = name
         image.src = link
+        image.alt = (`${name}`)
+        
     }
 }
