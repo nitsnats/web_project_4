@@ -32,7 +32,7 @@ const handleProfileFormSubmit = (data) => {
     userInfo.setUserInfo(data.Name, data.description)
     
     editProfilePopup.close()
-    addCardFormValidator.disableButton()
+    //addCardFormValidator.disableButton()
 }
 
 const addCardPopup = new PopupWithForm(".popup_type_add-card", handleAddCardSubmit)

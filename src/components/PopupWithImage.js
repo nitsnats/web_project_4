@@ -14,7 +14,7 @@ export class PopupWithImage extends Popup {
         
         caption.textContent = name
         image.src = link
-        image.alt = (`${name}`)
+        image.alt = (` image of ${name}`)
         
     }
 }
