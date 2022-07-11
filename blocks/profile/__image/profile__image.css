@@ -1,8 +1,13 @@
 .profile__image {
-  max-width: 120px;
+  width: 120px;
   max-height: 120px;
   margin: 3.75px 26.25px 3.75px 0;
   border-radius: 50%;
+}
+
+.profile__image:hover {
+  cursor: url(/src/images/cursor_edit.svg),auto;
+  opacity: 1;
 }
 
 @media screen and (max-width: 785px) {

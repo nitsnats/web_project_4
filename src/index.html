@@ -29,13 +29,13 @@
                     </div>
                     <div class="profile__info">
                         <div class="profile__item">
-                            <h1 class="profile__title profile__title_type_title" >Jacques Cousteau</h1>
+                            <h1 class="profile__title profile__title_type_title" ></h1>
                             <button
                                 type="button"
                                 class="profile__edit-button"
                             ></button>
                         </div>
-                        <p class="profile__description profile__description_type_description">Explorer</p>
+                        <p class="profile__description profile__description_type_description"></p>
                     </div>
                     <button type="button" class="profile__add-button"></button>
                 </section>
@@ -134,10 +134,32 @@
                         <span id="card-title-input-error" class="popup__input-error"></span>
                         <input id="card-link-input" class="popup__input popup__input_type_card-link" type="url" name="card-link" placeholder="Card link" required/>
                         <span id="card-link-input-error" class="popup__input-error"></span>
-                        <button type="submit" class="popup__save popup__save_type_add-card" name="Save">Add</button>
+                        <button type="submit" class="popup__save popup__save_type_add-card" name="Save">Create</button>
                     </form>
                 </div>
             </div>
+
+            <div class="popup popup_type_avatar-change">
+              <div class="popup__item">
+                  <button type="button" class="popup__close" name="close"></button>
+                  <form class="popup__form popup__form_card" name="naw">
+                      <h3 class="popup__title">Change profile picture</h3>
+                      <input id="card-link-input" class="popup__input popup__input_type_card-link" type="url" name="card-link" placeholder="picture" required/>
+                      <span id="card-link-input-error" class="popup__input-error"></span>
+                      <button type="submit" class="popup__save popup__save_type_add-card" name="Save">Save</button>
+                  </form>
+              </div>
+          </div>
+
+          <div class="popup popup_type_confirm-delete">
+            <div class="popup__item">
+                <button type="button" class="popup__close" name="close"></button>
+                <form class="popup__form popup__form_card" name="naw">
+                    <h3 class="popup__title">Are you sure?</h3>
+                    <button type="submit" class="popup__save popup__save_type_add-card" name="Save">Yes</button>
+                </form>
+            </div>
+        </div>
 
             <section class="popup popup_type-preview">
                 <div class="popup__item popup__item_preview">
@@ -154,7 +176,11 @@
                 <img class="element__image" src="#" />
                 <div class="element__wrap">
                     <h2 class="element__title"></h2>
-                    <button class="element__button-like" type="button"></button>
+                    <div class="element__likes">
+                      <button class="element__button-like" type="button"></button>
+                      <div class="element__likes-count"></div>
+                    </div>
+                    
                 </div>
             </article>
         </template>

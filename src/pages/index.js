@@ -1,6 +1,6 @@
 import "./../pages/index.css";
 import "./../fonts/font.css";
-import { initialCards, elementList, editButtonProfile, addButtonProfile, popupEditProfile, popupInputName, popupInputDescription, popupAddCard, settings} from "../utils/constants.js"
+import { elementList, editButtonProfile, addButtonProfile, popupEditProfile, popupInputName, popupInputDescription, popupAddCard, settings, popupChangeAvatar, avatar, popupDeleteCard} from "../utils/constants.js"
 import { Card} from "../components/Card.js"
 import FormValidator from "../components/FormValidator.js";
 import { PopupWithForm } from "../components/PopupWithForm.js"
@@ -8,35 +8,99 @@ import { PopupWithImage } from "../components/PopupWithImage.js"
 import { Section } from "../components/Section.js"
 import { UserInfo } from "../components/UserInfo.js"
 
+import { api} from "../utils/Api.js"
 
+
+const userInfo = new UserInfo({
+    nameSelector: ".profile__title", 
+    jobSelector: ".profile__description",
+    avatarSelector: ".profile__image"
+})
+
+
+let userId
+
+Promise.all([api.getUserInfo(), api.getCards()])
+    .then(([userData, cards]) => {
+        userId = userData._id
+
+        userInfo.setUserInfo(userData.name, userData.about, userData.avatar)
+        section.renderItems(cards)
+})
+    .catch(console.log)
+
+
+// validators    
 const editFormValidator = new FormValidator(settings, popupEditProfile)
 const addCardFormValidator = new FormValidator(settings, popupAddCard)
+const changeAvatarFormValidator = new FormValidator(settings, popupChangeAvatar)
 
 editFormValidator.enableValidation();
 addCardFormValidator.enableValidation();
+changeAvatarFormValidator.enableValidation();
 
-const handleAddCardSubmit = (data) => {   
-    renderCard( 
-      {
-        name: data["card-title"],
-        link: data["card-link"],
-      },    
-        elementList
-    );
-        
-    addCardPopup.close()
-    addCardFormValidator.disableButton()
+// submit handlers of modals
+const handleAddCardSubmit = (data) => {
+    addCardPopup.changeText("saving...")  
+    api.addCard(data["card-title"], data["card-link"])
+    .then(res => {
+        renderCard(res,                
+              elementList
+          );
+          //addCardPopup.changeText("initial") 
+          addCardPopup.changeText("Create") 
+        })
+    .catch((err) => {
+        console.log(err);
+      })
+    .finally(() =>{
+        addCardPopup.close()
+        addCardFormValidator.disableButton()
+    })    
 }
 
 const handleProfileFormSubmit = (data) => {
-    userInfo.setUserInfo(data.Name, data.description)
+editProfilePopup.changeText("saving...")
+    api.editProfile(data.Name, data.description)
+    .then(res => {
+        userInfo.setUserInfo(res.name, res.about, res.avatar)
+        editProfilePopup.changeText("Save")
     
-    editProfilePopup.close()
-    //addCardFormValidator.disableButton()
+        editProfilePopup.close()
+    })
+    .catch((err) => {
+        console.log(err);
+      })
+    .finally(() =>{
+        
+    })
 }
 
+
+const handleAvatarSubmit = (data) => {
+    avatarChangePopup.changeText("saving...")
+    api.editAvatar(data["card-link"])
+    .then(res => {
+        userInfo.setUserAvatar(res.avatar)
+        avatarChangePopup.changeText("Save")
+    })
+    .catch((err) => {
+        console.log(err);
+      })
+    .finally(() =>{
+        avatarChangePopup.close()
+    })
+}
+
+// instances of modals
 const addCardPopup = new PopupWithForm(".popup_type_add-card", handleAddCardSubmit)
 addCardPopup.setEventListeners()
+
+const avatarChangePopup = new PopupWithForm(".popup_type_avatar-change", handleAvatarSubmit)
+avatarChangePopup.setEventListeners()
+
+const deleteCardPopup = new PopupWithForm(".popup_type_confirm-delete")
+deleteCardPopup.setEventListeners()
 
 const editProfilePopup = new PopupWithForm(".popup_type_edit-profile", handleProfileFormSubmit)
 editProfilePopup.setEventListeners()
@@ -46,21 +110,67 @@ imagePopup.setEventListeners()
 
 const templateCardSelector = "#card-template"
 
-const renderCard = (cardData, elementList) => {
-    const card = new Card(cardData, templateCardSelector, (name, link) => {
-        imagePopup.open(name, link)
-    })    
+const handleCardClick = (data) => {
+    imagePopup.open(data.name, data.link)
+}
+
+const activateLikeButton = (card) => {
+    if(card.isLiked()) {
+        api.removeLike(card.getId())
+       .then(res => {
+        card.setLikes(res.likes)
+    })
+        .catch((err) => {
+            console.log(err);
+          })
+    } else {
+        api.addLike(card.getId())
+       .then(res => {
+        card.setLikes(res.likes)
+    })
+        .catch((err) => {
+            console.log(err);
+          })
+    }
+}     
+
+const handleDeleteClick = (card) => {
+    deleteCardPopup.open()
+
+    deleteCardPopup.changeSubmitHandler(() => {
+        deleteCardPopup.changeText("deleting...")
+        api.deleteCard(card.getId())
+          .then(() => {
+            card.removeCard()
+            deleteCardPopup.changeText("Yes")  
+           })
+           .catch((err) => {
+            console.log(err);
+          })
+        .finally(() =>{
+            deleteCardPopup.close()
+        })
+  })
+}
+
+const renderCard = (data) => {
+    const card = new Card({
+        data,
+        userId,
+        templateCardSelector,
+        handleCardClick: () => handleCardClick(data), 
+        activateLikeButton: () => activateLikeButton(card),
+        handleDeleteClick: handleDeleteClick
+    }
+    )    
     section.addItem(card.getCardElement());
 }
 
-const section = new Section({ items: initialCards, renderer: renderCard }, ".elements")
-
-section.renderItems()
-
-const userInfo = new UserInfo({
-    nameSelector: ".profile__title", 
-    jobSelector: ".profile__description",
-})
+const section = new Section(
+    {  
+        renderer: renderCard 
+    }, ".elements"
+    )
 
 
 function fillProfileForm() {
@@ -77,16 +187,16 @@ function handleEditButtonClick() {
 function handleAddButtonClick() {
     addCardFormValidator.disableButton()
     addCardPopup.open()
-    
 }
 
-// const allCloseButtons = document.querySelectorAll(".popup__close");
+function handleChangeAvatarClick() {
+    changeAvatarFormValidator.disableButton()
+    avatarChangePopup.open()
+}
 
-// allCloseButtons.forEach((button) => {
-//   const popup = button.closest('.popup');
-//   button.addEventListener('click', () => closePopup(popup));
-// });
 
 editButtonProfile.addEventListener("click", handleEditButtonClick);
 
 addButtonProfile.addEventListener("click", handleAddButtonClick);
+
+avatar.addEventListener("click", handleChangeAvatarClick);

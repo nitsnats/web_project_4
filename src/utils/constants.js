@@ -48,6 +48,13 @@ export const popupInputDescription = popupEditProfile.querySelector(
     ".popup__input_type_description"
 );
 
+export const popupChangeAvatar = document.querySelector(".popup_type_avatar-change");
+export const avatar = document.querySelector(".profile__image");
+
+//export const popupDeleteCard = document.querySelector(".popup_type_avatar-change");
+//export const deleteCard = document.querySelector(".popup__save_type_add-card");
+
+
 //popup add card
 export const popupAddCard = document.querySelector(".popup_type_add-card");
 
@@ -64,3 +71,4 @@ export const settings = {
     inputErrorClass: "popup__input_type_error",
     errorClass: "popup__error_visible",
 }
+
