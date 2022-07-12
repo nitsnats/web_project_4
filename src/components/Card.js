@@ -1,5 +1,3 @@
-import { openPopup } from "../utils/utils.js"
-
 export class Card {
     constructor({data, userId, templateCardSelector, handleCardClick, activateLikeButton, handleDeleteClick}) { //{text,link}
         this._text = data.name; 
@@ -30,13 +28,6 @@ export class Card {
         this._card = null;//
     }
     
-    _openImagePreview = () => {
-        popupImage.src = this._link;
-        popupImage.alt = this._text;
-        popupTitle.textContent = this._text;
-        openPopup(popupImagePreview);
-    };
-
     _setEventListeners = () => {
         this._likeButton.addEventListener("click", () => this._activateLikeButton());
         this._deleteButton.addEventListener("click", () => this._handleDeleteClick(this));
@@ -46,11 +37,11 @@ export class Card {
     setLikes(newLikes) {
         this._likes = newLikes
 
-        // const likesAmount = this._card.querySelector(".element__likes-count");
-        // likesAmount.textContent = this._likes.length;
+        const likeCounter = this._card.querySelector(".element__likes-count");
+        likeCounter.textContent = this._likes.length;
 
-        const likesAmount = this._likes.length;
-        this._card.querySelector(".element__likes-count").textContent = likesAmount;
+        // const likeCounter = this._likes.length;
+        // this._likesCounter.querySelector(".element__likes-count").textContent = likeCounter;
         
         const cardIsLikedByUser = this.isLiked()
 
@@ -59,7 +50,6 @@ export class Card {
         } else {
             this._likeButton.classList.remove("element__button-like_active");
         }
-        
     }
 
     isLiked() {
@@ -74,6 +64,8 @@ export class Card {
         this._cardImage = this._card.querySelector(".element__image");
         const cardTitle = this._card.querySelector(".element__title");
 
+        this._likesCounter = this._card.querySelector(".element__likes-count");
+
         cardTitle.textContent = this._text;
         this._cardImage.src = this._link;
         this._cardImage.alt = this._text;
@@ -83,7 +75,7 @@ export class Card {
         this.setLikes(this._likes)
 
         if(this._userId !== this._ownerId) {
-            this._card.querySelector(".element__button-delete").style.display = "none"
+            this._likeButton.style.display = "none"
         }
          
         return this._card;

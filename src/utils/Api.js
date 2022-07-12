@@ -3,19 +3,22 @@ class Api {
       this._baseUrl = options.baseUrl
       this._headers = options.headers
     }
+
+    _checkResponse = (res) =>
+    res.ok ? res.json() : Promise.reject(res.statusText);
   
     getUserInfo() {
         return fetch(this._baseUrl + "/users/me", {
           headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }
     
     getCards() {
         return fetch(this._baseUrl + "/cards", {
           headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }
 
     editProfile(name, about) {
@@ -27,7 +30,7 @@ class Api {
                 about
               })
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }
 
     editAvatar(avatar) {
@@ -38,7 +41,7 @@ class Api {
                 avatar
               })
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }  
 
     addCard(name, link) {
@@ -50,7 +53,7 @@ class Api {
                 link,
               })
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }
 
     addLike(id) {
@@ -58,7 +61,7 @@ class Api {
             method: "PUT",
             headers: this._headers,
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }
 
     removeLike(id) {
@@ -66,7 +69,7 @@ class Api {
             method: "DELETE",
             headers: this._headers,
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+        .then(this._checkResponse);
       }
 
     removeLike(id) {
@@ -74,7 +77,7 @@ class Api {
           method: "DELETE",
           headers: this._headers
       })
-      .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+      .then(this._checkResponse);
     }
 
     deleteCard(id) {
@@ -82,7 +85,7 @@ class Api {
           method: "DELETE",
           headers: this._headers
       })
-      .then(res => res.ok ? res.json() : Promise.reject(res.statusText))
+      .then(this._checkResponse);
       
     }
 

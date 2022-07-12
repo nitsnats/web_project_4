@@ -70,7 +70,16 @@ export class FormValidator {
           });
         });
     };
-      
+    
+    // resetValidation() {
+    //   this._toggleButtonState(); 
+
+    //   this._inputList.forEach((inputElement) => {
+    //     this._hideError(inputElement) 
+    //   });
+
+    // }
+
     // resetValidation() {
     //     this.inputList.forEach(input => {
     //         this._hideInputError(input)

@@ -47,15 +47,15 @@ const handleAddCardSubmit = (data) => {
         renderCard(res,                
               elementList
           );
-          //addCardPopup.changeText("initial") 
-          addCardPopup.changeText("Create") 
+        })
+        .then(() => {
+            addCardPopup.close()
         })
     .catch((err) => {
         console.log(err);
       })
     .finally(() =>{
-        addCardPopup.close()
-        addCardFormValidator.disableButton()
+        addCardPopup.changeText("Create")
     })    
 }
 
@@ -64,15 +64,15 @@ editProfilePopup.changeText("saving...")
     api.editProfile(data.Name, data.description)
     .then(res => {
         userInfo.setUserInfo(res.name, res.about, res.avatar)
-        editProfilePopup.changeText("Save")
-    
+    })
+    .then(() => {
         editProfilePopup.close()
     })
     .catch((err) => {
         console.log(err);
       })
     .finally(() =>{
-        
+        editProfilePopup.changeText("Save")
     })
 }
 
@@ -82,13 +82,15 @@ const handleAvatarSubmit = (data) => {
     api.editAvatar(data["card-link"])
     .then(res => {
         userInfo.setUserAvatar(res.avatar)
-        avatarChangePopup.changeText("Save")
+    })
+    .then(() => {
+        avatarChangePopup.close()
     })
     .catch((err) => {
         console.log(err);
       })
     .finally(() =>{
-        avatarChangePopup.close()
+        avatarChangePopup.changeText("Save")
     })
 }
 
@@ -127,7 +129,7 @@ const activateLikeButton = (card) => {
         api.addLike(card.getId())
        .then(res => {
         card.setLikes(res.likes)
-    })
+        })
         .catch((err) => {
             console.log(err);
           })
@@ -136,19 +138,22 @@ const activateLikeButton = (card) => {
 
 const handleDeleteClick = (card) => {
     deleteCardPopup.open()
+    //deleteCardPopup.resetValidation()
 
     deleteCardPopup.changeSubmitHandler(() => {
         deleteCardPopup.changeText("deleting...")
         api.deleteCard(card.getId())
           .then(() => {
             card.removeCard()
-            deleteCardPopup.changeText("Yes")  
+           })
+           .then(() => {
+            deleteCardPopup.close()
            })
            .catch((err) => {
             console.log(err);
           })
         .finally(() =>{
-            deleteCardPopup.close()
+            deleteCardPopup.changeText("Yes")
         })
   })
 }
@@ -182,16 +187,19 @@ function fillProfileForm() {
 function handleEditButtonClick() {
     fillProfileForm();
     editProfilePopup.open()
+    //editProfilePopup.resetValidation()
 }
 
 function handleAddButtonClick() {
     addCardFormValidator.disableButton()
     addCardPopup.open()
+    //addCardPopup.resetValidation()
 }
 
 function handleChangeAvatarClick() {
     changeAvatarFormValidator.disableButton()
     avatarChangePopup.open()
+    //avatarChangePopup.resetValidation()
 }
 
 
